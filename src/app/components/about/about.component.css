@@ -5,13 +5,21 @@ font-family: 'Yeseva One', cursive; */
 h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
-  margin-top: 40px;
-  margin-right: 5%;
+  color: #2C75FF;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 p{
   text-align: center;
   letter-spacing: 0.5px;
   color: #2C75FF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h5{
+  color: #2C75FF;
+  text-align: center;
   font-weight: 600;
+  font-family: 'Yeseva One', cursive;
 }
