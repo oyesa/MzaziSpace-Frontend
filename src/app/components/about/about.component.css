@@ -6,8 +6,9 @@ h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
   color: #2C75FF;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  font-size: 44px;
 }
 
 p{
@@ -15,6 +16,8 @@ p{
   letter-spacing: 0.5px;
   color: #2C75FF;
   font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  margin-bottom: 22px;
 }
 
 h5{
@@ -22,4 +25,11 @@ h5{
   text-align: center;
   font-weight: 600;
   font-family: 'Yeseva One', cursive;
+  font-size: 22px;
+}
+
+.jumbotron{
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 3px 5px #888888;
 }
