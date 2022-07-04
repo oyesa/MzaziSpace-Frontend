@@ -1,4 +1,42 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Rokkitt', serif;
 font-family: 'Yeseva One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,900;1,200;1,300;1,400;1,500;1,700;1,800&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap');
 
+
+
+.my-navbar {
+  /* box-shadow: 0px 10px 30px rgba(216, 216, 216, 0.45); */
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #2C75FF !important;
+  font-family: 'Yeseva One', cursive !important;
+  font-size: 17px;
+}
+.navbar-brand img {
+  width: 50px;
+}
+
+.nav-link {
+  border-bottom: 4px solid white;
+  margin-right: 24px;
+  transition: 0.3s ease;
+  padding: 5px;
+}
+.nav-link:hover {
+  color: #2C75FF;
+  border-bottom: 4px solid #EDB82C;
+}
+.nav-active a {
+  color: #2C75FF !important;
+  font-family: 'Yeseva One', cursive !important;
+  font-size: 17px;
+}
+/* .nav-item{
+  color: #2C75FF !important;
+  font-family: 'Montserrat', sans-serif !important;
+} */
