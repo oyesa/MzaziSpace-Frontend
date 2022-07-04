@@ -1,0 +1,13 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Yeseva One', cursive; */
+
+.socials{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+h6{
+  font-size: 14px;
+}
+
