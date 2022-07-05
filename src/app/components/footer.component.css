@@ -2,12 +2,22 @@
 font-family: 'Rokkitt', serif;
 font-family: 'Yeseva One', cursive; */
 
-.socials{
-  display: flex !important;
-  justify-content: space-between !important;
+.icons .fa{
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+  font-size: 14px;
+}
+
+p{
+  font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 5px;
 }
 
 h6{
   font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 }
 
