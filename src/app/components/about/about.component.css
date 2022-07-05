@@ -34,3 +34,9 @@ h5{
   padding: 10px;
   box-shadow: 3px 5px #888888;
 }
+
+.btn{
+  font-family: 'Montserrat', sans-serif;
+  color: #2C75FF;
+  font-size: 17px;
+}

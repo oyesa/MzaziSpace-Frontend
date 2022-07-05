@@ -1,0 +1,24 @@
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Yeseva One', cursive; */
+
+
+h1{
+  font-family: 'Yeseva One', cursive;
+  text-align: center;
+  color: #2C75FF;
+  margin-top: 5%;
+  margin-bottom: 17px;
+  font-size: 44px;
+}
+
+p{
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #2C75FF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}

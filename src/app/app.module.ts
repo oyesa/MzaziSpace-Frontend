@@ -17,7 +17,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 const appRoutes: Routes = [
-  {path: 'home', component: HomepageComponent},
+  {path: 'home', component: AboutComponent},
   {path: 'about', component: AboutComponent},
   {path: 'service', component: OurservicesComponent}
 ]
