@@ -4,6 +4,8 @@ import { RouterModule, Routes} from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -15,7 +17,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 const appRoutes: Routes = [
-  
+  {path: 'home', component: HomepageComponent},
   {path: 'about', component: AboutComponent},
   {path: 'service', component: OurservicesComponent}
 ]
@@ -23,6 +25,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ProfileComponent,
+    HomepageComponent,
     AboutComponent,
     NavbarComponent,
     FooterComponent,
