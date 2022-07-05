@@ -2,26 +2,21 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
-/* body {
+ body {
   
-    background: #ebe9f3;
-    background-image: linear-gradient(130deg, rgba(0, 122, 244, 0) 20%, rgb(0, 0, 255), 80%); 
+    background: #ffffff;;
+  
     font-family: Verdana, Tahoma, sans-serif;
-    margin: 5%;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    border-style:none;
-    border-radius: 20px;
-   
-   
 
-} */
+
+} 
 .mycontainer {
 
-    width:35vw;
+    width:30vw;
     float:left;
     margin-top: -35%;
     color:whitesmoke;
+  
    
     
    
@@ -29,7 +24,7 @@
 }
 
  .img{
-    height:70vh;
+    height:60vh;
     width:35vw;
     margin-left: 60%;
     border-radius: 1%;
