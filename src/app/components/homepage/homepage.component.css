@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabriela:wght@400;700&display=swap');
 @import "~bootstrap/dist/css/bootstrap.css";
 
-* {
-    scroll-behavior: smooth;
-    font-family: 'Gabriela';
-    margin:0;
-    padding: 0;
-   
-   
-    
-}
 
 body {
   
-    margin: 2%;
+    background: #1B019B;
+    background-image: linear-gradient(130deg, rgba(0, 122, 244, 0) 20%, rgb(0, 0, 255), 80%); 
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 5%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    border-style:none;
+    border-radius: 20px;
+   
+   
+
 }
 .mycontainer {
 
-    width:30vw;
+    width:25vw;
     float:left;
-    margin-top: -30%;
+    margin-top: -40%;
     color:whitesmoke;
+    
    
     
 }
 
  img{
-    height:50vh;
-    width:30vw;
+    height:60vh;
+    width:45vw;
     margin-left: 50%;
+    border-radius: 1%;
     
 }
 ul li a{
