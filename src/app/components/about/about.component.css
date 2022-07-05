@@ -5,24 +5,28 @@ font-family: 'Yeseva One', cursive; */
 h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
-  color: #2C75FF;
-  margin-top: 13%;
-  margin-bottom: 17px;
+  color: black;
+  /* margin-top: 7%;
+  margin-bottom: 17px; */
   font-size: 44px;
 }
+/* .mzazi-header{
+  
+} */
+
 
 p{
   text-align: center;
   letter-spacing: 0.5px;
-  color: #2C75FF;
+  color: black;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 22px;
 }
 
-h5{
-  color: #2C75FF;
+h5, h6{
+  color: #6114D1;
   text-align: center;
   font-weight: 500;
   font-family: 'Yeseva One', cursive;
@@ -37,6 +41,37 @@ h5{
 
 .btn{
   font-family: 'Montserrat', sans-serif;
-  color: #2C75FF;
+  color: #6114D1;
   font-size: 17px;
 }
+
+/* .bout{
+  background-image: url(/assets/commstaytog.jpg);
+  background-repeat: no-repeat;
+  
+} */
+
+.bout-img{
+  float: left;
+  padding: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  color: #6114D1;
+  font-family: 'Montserrat', sans-serif;
+}
+

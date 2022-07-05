@@ -7,8 +7,8 @@ font-family: 'Yeseva One', cursive; */
 h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
-  color: #2C75FF;
-  margin-top: 5%;
+  color: #1B019B;
+  margin-top: 1%;
   margin-bottom: 17px;
   font-size: 44px;
 }
@@ -22,3 +22,29 @@ p{
   font-weight: 400;
   margin-bottom: 22px;
 }
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+.call-buttons{
+  color: #1B019B;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
