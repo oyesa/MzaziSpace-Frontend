@@ -8,21 +8,12 @@ font-family: 'Yeseva One', cursive; */
 
  body {
   
-    background: #ffffff;
+    background: #fcfcd3;
     font-family: 'Yeseva One', cursive;
     
-  
- 
-
 
 } 
 
-   .about{
-    text-align: justify;
-   }
-   .card{
-    margin: 2% 2% 2% 1%;
-   }
 .mycontainer {
 
     width:30vw;
