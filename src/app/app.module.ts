@@ -20,7 +20,8 @@ const appRoutes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'community', component: CommunityComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'service', component: OurservicesComponent}
+  {path: 'service', component: OurservicesComponent},
+  {path: 'testimonials', component: TestimonialsComponent},
 ]
 
 @NgModule({
