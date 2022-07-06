@@ -5,7 +5,7 @@ font-family: 'Yeseva One', cursive; */
 h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
-  color: black;
+  color: #F4B504;
   /* margin-top: 7%;
   margin-bottom: 17px; */
   font-size: 44px;
@@ -18,15 +18,15 @@ h1{
 p{
   text-align: center;
   letter-spacing: 0.5px;
-  color: black;
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 22px;
 }
 
 h5, h6{
-  color: #6114D1;
+  color: #F4B504;
   text-align: center;
   font-weight: 500;
   font-family: 'Yeseva One', cursive;
@@ -37,6 +37,7 @@ h5, h6{
   border-radius: 5px;
   padding: 10px;
   box-shadow: 3px 5px #888888;
+  margin-top: 5%; 
 }
 
 .btn{
@@ -73,5 +74,17 @@ h5, h6{
   padding: 8px 12px;
   color: #6114D1;
   font-family: 'Montserrat', sans-serif;
+}
+
+.about{
+  margin-top: 7%;
+  background-image: url(/assets/andrae-ricketts-Q9_zv0LN4jU-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3%;
+}
+.about-us{
+  margin-top: 3%;
 }
 
