@@ -13,13 +13,15 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'home', component: HomepageComponent},
   {path: 'about', component: AboutComponent},
   {path: 'service', component: OurservicesComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'findcounselor', component: FindcounselorComponent}
 ];
 
 @NgModule({
