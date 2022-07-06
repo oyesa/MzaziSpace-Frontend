@@ -17,6 +17,7 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 const appRoutes: Routes = [
   
 ]
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     MzazieventsComponent,
     TestimonialsComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    FindcounselorComponent
   ],
   imports: [
     BrowserModule,
