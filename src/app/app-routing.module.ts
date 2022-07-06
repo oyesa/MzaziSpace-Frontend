@@ -14,6 +14,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
+import { ChildservicesComponent } from './components/childservices/childservices.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'service', component: OurservicesComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'findcounselor', component: FindcounselorComponent}
+  {path: 'findcounselor', component: FindcounselorComponent},
+  {path: 'childcare', component: ChildservicesComponent}
 ];
 
 @NgModule({
