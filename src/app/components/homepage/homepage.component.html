@@ -13,16 +13,16 @@
    
 </head>
   <body>
- <div class="container mt-0  " style="background-color: #0d3944; border-radius: 5px; top: 7%; margin-left: 12%;">
+ <div class="container mt-0  " style="background-color: #f4b504; border-radius: 5px; top: 7%; margin-left: 12%;">
     
         <img class="img" src= "https://media.istockphoto.com/photos/unity-of-indian-children-asia-picture-id537311780?k=20&m=537311780&s=612x612&w=0&h=XS7Ub5TGi_sRC_m0bmfMJieAVVK8GpvSCtrs5ZlTl4k=" alt="" srcset="" >
            
         <div class="mycontainer">
                    
            
-            <h1 class="display-3 text-center"> WELCOME TO MZAZI SPACE</h1>
+            <h1 class="display-3 text-center" style="font-family: 'Yeseva One', cursive;"> WELCOME TO MZAZI SPACE</h1>
            
-            <p class="lead mt-4" style="line-height:4vh; font-size: 1.4rem; margin-left: 10%;">Being a single parent is nothing but easy,
+            <p class="lead mt-4" style="line-height:4vh; font-size: 1.4rem; margin-left: 10%; font-family: 'Montserrat', sans-serif; font-weight:500">Being a single parent is nothing but easy,
                 Mzazi Space aims to match single parents with similar interests 
                 giving them a sense of community and camaraderie.</p>
          
@@ -65,6 +65,138 @@
  
 
 </div>
+    
+<div class="bg">
+    <img src="" alt="">
+  </div>
+
+
+  <div class="container">
+    <div class="row" *ngif='let house in houses'>
+      <div class="repos">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col">
+                    <div class="name">
+                      <h2>{{house.location}}</h2>
+                    </div>
+                  </div>
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col-6">
+                    <div class="content">
+                      <div class="desc">{{house.description}}</div>
+                    </div>
+                  </div>
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="forks">
+                  <b><i class="fas fa-code-branch"></i>Forks &nbsp; Ksh {{house.price}}</b>
+                </div>
+                
+                  <a href="#">
+                    <button class="btn btn-primary">view</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+    <span class="av" id="listing">
+      <h2>Why Mzazi Space</h2>
+      <p>We Treat Everyone as Family </p>
+    </span>
+    <div class="row">
+
+      <div class="col">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <img src="https://media.istockphoto.com/photos/diverse-team-of-businesspeople-with-their-hands-in-a-huddle-picture-id1224531615?k=20&m=1224531615&s=612x612&w=0&h=Lsqo4g-mS9-C-IrAM9-er7Fs2ADwenJo83vu2okOPtA=" style="height: 300px;" width="100%" alt="">
+          </div>
+          <div class="card-footer">
+            <div class="description">
+              Feel a sense of community by joining a community. <br>
+            </div>
+            <div class="row">
+              
+              <div class="col">
+                
+                  <a  class="btn " style="background-color: #f4b504; margin-top:1%" routerLink="/community">Join Community</a>
+             
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <img src="https://cdn.mind-diagnostics.org/uploads/mind-diagnostics/images/image/url/how-to-become-a-counselor-to-help-others-3_.jpg.jpg" style="height: 300px;" width="100%" alt="">
+          </div>
+          <div class="card-footer">
+            <div class="description">
+             Talk to a counselor. <br>
+            </div>
+            <div class="row">
+             
+              <div class="col">
+                <a  class="btn " style="background-color: #f4b504; margin-top:1%" routerLink="/service">Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <img src="https://www.apa.org/images/single-parent-title-image_tcm7-217916.jpg" style="height: 300px;" width="100%" alt="">
+          </div>
+          <div class="card-footer">
+            <div class="description">
+              learn more about single parenting. <br>
+            </div>
+            <div class="row">
+              
+              <div class="col">
+                
+                <a  class="btn " style="background-color: #f4b504; margin-top:1%" routerLink="/learn">Learn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+           
+         
+     
+
+    
+
+
+
+    
+
+
 <!-- ..................................Footer................ -->
 <!-- <div class="">
 <h3></h3>
@@ -79,6 +211,10 @@
   </div>
 </div>
 </div> -->
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

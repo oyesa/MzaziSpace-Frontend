@@ -1,26 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabriela:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,900;1,200;1,300;1,400;1,500;1,700;1,800&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap');
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Yeseva One', cursive; */
+
  body {
   
-    background: #ffffff;;
+    background: #ffffff;
+    font-family: 'Yeseva One', cursive;
+    
   
-    font-family: Verdana, Tahoma, sans-serif;
+ 
 
 
 } 
+
+   .about{
+    text-align: justify;
+   }
+   .card{
+    margin: 2% 2% 2% 1%;
+   }
 .mycontainer {
 
     width:30vw;
     float:left;
     margin-top: -35%;
-    color:whitesmoke;
+    color:#000;
+    font-family: 'Yeseva One', cursive;
   
-   
-    
-   
-    
+
 }
 
  .img{

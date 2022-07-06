@@ -1,6 +1,6 @@
 body{
     height: 100%;
-    background-color: #D9D9D9;
+    background-color: #fdfdcf;
     padding-top: 4vh;
     padding-bottom: 20vh;
 }
@@ -19,7 +19,7 @@ body{
 
 }
 .btn-orange{
-    background-color: #0a393e;
+    background-color:#f4b504;
     color: #ffff;
     border-radius: 40px;
 }
