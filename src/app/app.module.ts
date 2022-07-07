@@ -22,16 +22,6 @@ import { SinglefathersComponent } from './components/singlefathers/singlefathers
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 const appRoutes: Routes = [
-  {path: 'home', component: HomepageComponent},
-  {path: 'community', component: CommunityComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'service', component: OurservicesComponent},
-  {path: 'testimonials', component: TestimonialsComponent},
-  {path: 'groups', component: GroupsComponent},
-  {path: 'mzazievents', component: MzazieventsComponent},
-  {path: 'wellbeing', component: WellbeingComponent},
-  {path: 'singlefathers', component: SinglefathersComponent},
-  {path: 'special', component: SpecialComponent},
   
 ]
 
