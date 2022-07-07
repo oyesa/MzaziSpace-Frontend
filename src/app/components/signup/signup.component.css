@@ -1,0 +1,16 @@
+img{
+    width: 10vw;
+    margin: auto;
+    display: flex;
+    margin-bottom: 4%;
+}
+/* .container{
+
+} */
+
+h1{
+font-family: 'Montserrat', sans-serif;
+}
+h6{
+font-family: 'Yeseva One', cursive;
+}
