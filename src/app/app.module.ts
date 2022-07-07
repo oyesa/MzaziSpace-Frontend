@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -16,12 +17,17 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { WellbeingComponent } from './wellbeing/wellbeing.component';
+import { SinglefathersComponent } from './singlefathers/singlefathers.component';
+import { SpecialComponent } from './special/special.component';
 const appRoutes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'community', component: CommunityComponent},
   {path: 'about', component: AboutComponent},
   {path: 'service', component: OurservicesComponent},
   {path: 'testimonials', component: TestimonialsComponent},
+  {path: 'groups', component: GroupsComponent},
+  {path: 'mzazievents', component: MzazieventsComponent},
 ]
 
 @NgModule({
@@ -38,12 +44,20 @@ const appRoutes: Routes = [
     MzazieventsComponent,
     TestimonialsComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    WellbeingComponent,
+    SinglefathersComponent,
+    SpecialComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true})
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    HttpClientModule,
+    NgbModule
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
