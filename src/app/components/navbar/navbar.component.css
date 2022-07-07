@@ -33,6 +33,10 @@ font-family: 'Yeseva One', cursive; */
 }
 .nav-active a {
   color: #0b3b3d !important;
+  border-bottom: 4px solid #EDB82C;
+}
+.nav-active a {
+  color: black;
   font-family: 'Yeseva One', cursive !important;
   font-size: 17px;
 }

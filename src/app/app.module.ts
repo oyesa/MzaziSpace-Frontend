@@ -18,6 +18,8 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
+import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
+import { ChildservicesComponent } from './components/childservices/childservices.component';
 const appRoutes: Routes = [
   
 ]
@@ -38,7 +40,9 @@ const appRoutes: Routes = [
     TestimonialsComponent,
     SignupComponent,
     LoginComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    FindcounselorComponent,
+    ChildservicesComponent
   ],
   imports: [
     BrowserModule,
