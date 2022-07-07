@@ -43,12 +43,13 @@ export class LoginComponent implements OnInit {
     };
     
       this.authService.login(loginCredentials).subscribe(result =>{
-        console.log(result)
-        if(result.success){
+        // console.log(result)
+        if(result.password){
           // console.log(result);
           alert('Logged in successfully');
         }else{
           alert('Ooops')
+          console.log(result)
         }
 
       });

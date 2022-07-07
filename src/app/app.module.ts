@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
