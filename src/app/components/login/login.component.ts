@@ -21,15 +21,34 @@ export class LoginComponent implements OnInit {
       password: new FormControl('',[Validators.required])
     });
   }
+  // loginUser = () => {
+  //   if (this.form.valid) {
+  //       this.isLoading = true;
+  //       const loginCredentials: IAuthBody = {
+  //           email: this.form.controls.email.value,
+  //           password: this.form.controls.password.value
+  //       };
+  //       this.authService.authenticateUserWithServer(loginCredentials).subscribe(
+  //           res => {
+  //               this.isLoading = false;
+  //               this.snackBar.showSuccessSnackBar(this.successMessage);
 
   loginProcess(){
     if(this.formGroup.valid){
-      this.authService.login(this.formGroup.value).subscribe(result =>{
+      const loginCredentials: any = {
+        CustomUser:{
+        email: this.formGroup.controls['email'].value,
+        password: this.formGroup.controls['password'].value
+        }
+    };
+    
+      this.authService.login(loginCredentials).subscribe(result =>{
+        console.log(result)
         if(result.success){
-          console.log(result);
-          alert(result.message);
+          // console.log(result);
+          alert('Logged in successfully');
         }else{
-          alert(result.message)
+          alert('Ooops')
         }
 
       });
