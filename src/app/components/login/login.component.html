@@ -11,7 +11,7 @@
   <!-- Pills content -->
   <div class="tab-content">
     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-      <form>
+      <form class="login-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
         <div class="text-center mb-3">
           <h1>Hi !</h1>
           <h6>Welcome to Mzazi Space Login or Register to Continue</h6>
@@ -23,12 +23,13 @@
         <!-- Email input -->
         <div class="form-outline mb-4">
           <input type="email" id="loginName" class="form-control" placeholder="username" />
+          <input type="email" id="loginName" class="form-control" placeholder="Email or username" formControlName="email" />
           <label class="form-label" for="loginName"></label>
         </div>
   
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="loginPassword" class="form-control" placeholder="Password"/>
+          <input type="password" id="loginPassword" class="form-control" placeholder="Password" formControlName="password"/>
           <label class="form-label" for="loginPassword"></label>
         </div>
   
@@ -61,6 +62,7 @@
   </div>
   <!-- Pills content -->
             </div>
+
             <div class="col-md-4"></div>
         
         </div>

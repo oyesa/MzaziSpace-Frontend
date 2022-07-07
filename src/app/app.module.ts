@@ -18,7 +18,9 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 const appRoutes: Routes = [
   
 ]
@@ -44,9 +46,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true})
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
