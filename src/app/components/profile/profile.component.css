@@ -1,0 +1,25 @@
+body{
+    height: 100%;
+    background-color: #fdfdcf;
+    padding-top: 4vh;
+    padding-bottom: 20vh;
+}
+.userdetails{
+    background-color: white;
+}
+.h-font-semibold{
+    color: #111F3C;
+    font-family: 'Montserrat', sans-serif;
+}
+.p-description{
+    color: #111F3C;
+}
+.uploaded-post{
+    background-color: white;
+
+}
+.btn-orange{
+    background-color:#f4b504;
+    color: #ffff;
+    border-radius: 40px;
+}

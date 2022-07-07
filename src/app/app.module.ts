@@ -21,6 +21,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
+import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 const appRoutes: Routes = [
   
 ]
@@ -45,15 +49,18 @@ const appRoutes: Routes = [
     SpecialComponent,
     WellbeingComponent,
     
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     HttpClientModule,
-    NgbModule
+    NgbModule,
 
     
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
