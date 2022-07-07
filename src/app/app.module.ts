@@ -17,6 +17,10 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 const appRoutes: Routes = [
   
 ]
@@ -36,12 +40,15 @@ const appRoutes: Routes = [
     MzazieventsComponent,
     TestimonialsComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true})
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
