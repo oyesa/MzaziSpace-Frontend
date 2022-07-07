@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -17,6 +17,10 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 const appRoutes: Routes = [
   
 ]
@@ -36,12 +40,16 @@ const appRoutes: Routes = [
     MzazieventsComponent,
     TestimonialsComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true})
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
