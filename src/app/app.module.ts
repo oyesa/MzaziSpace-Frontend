@@ -21,7 +21,15 @@ import { UpdateProfileComponent } from './components/profile/update-profile/upda
 import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 import { ChildservicesComponent } from './components/childservices/childservices.component';
 const appRoutes: Routes = [
+<<<<<<< HEAD
   
+=======
+  {path: 'home', component: HomepageComponent},
+  {path: 'community', component: CommunityComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'service', component: OurservicesComponent},
+  {path: 'testimonials', component: TestimonialsComponent},
+>>>>>>> dd0741e212dd6511e108b994ac5a3f24ba0fed9b
 ]
 
 @NgModule({
