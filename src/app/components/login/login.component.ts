@@ -9,6 +9,7 @@ import { AuthServiceService } from 'src/app/auth-service.service';
 })
 export class LoginComponent implements OnInit {
   formGroup: FormGroup;
+  router: any;
 
   constructor(private authService: AuthServiceService) { }
 
@@ -44,12 +45,13 @@ export class LoginComponent implements OnInit {
     
       this.authService.login(loginCredentials).subscribe(result =>{
         console.log(result)
-        if(result.success){
+        // if(result.success){
           // console.log(result);
-          alert('Logged in successfully');
-        }else{
-          alert('Ooops')
-        }
+        //   alert('Logged in successfully');
+        // }else{
+        //   alert('Ooops')
+        // }
+        this.router.navigate(['/home']);
 
       });
     }
