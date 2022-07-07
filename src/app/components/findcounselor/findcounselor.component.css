@@ -40,6 +40,11 @@ h1, h2{
   clear: both;
 }
 
+.couns-header{
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
