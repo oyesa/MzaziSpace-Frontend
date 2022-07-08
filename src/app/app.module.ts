@@ -20,16 +20,14 @@ import { LoginComponent } from './components/login/login.component';
 import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
 import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 import { ChildservicesComponent } from './components/childservices/childservices.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const appRoutes: Routes = [
-<<<<<<< HEAD
   
-=======
   {path: 'home', component: HomepageComponent},
   {path: 'community', component: CommunityComponent},
   {path: 'about', component: AboutComponent},
   {path: 'service', component: OurservicesComponent},
   {path: 'testimonials', component: TestimonialsComponent},
->>>>>>> dd0741e212dd6511e108b994ac5a3f24ba0fed9b
 ]
 
 @NgModule({
@@ -55,7 +53,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true})
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
