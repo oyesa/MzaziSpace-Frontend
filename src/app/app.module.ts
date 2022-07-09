@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,13 +19,14 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
 import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 import { ChildservicesComponent } from './components/childservices/childservices.component';
 import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
-import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 const appRoutes: Routes = [
@@ -57,11 +59,13 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true}),
     HttpClientModule,
-    NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    NgbModule,
+    NgbDropdownModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

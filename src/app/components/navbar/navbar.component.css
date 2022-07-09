@@ -28,13 +28,16 @@ font-family: 'Yeseva One', cursive; */
   padding: 5px;
 }
 .nav-link:hover {
-  color: #6114D1;
+  
   border-bottom: 4px solid #EDB82C;
 }
+
+
 .nav-active a {
   color: black;
   font-family: 'Yeseva One', cursive !important;
   font-size: 17px;
+  border-bottom: 4px solid #EDB82C;
 }
 /* .nav-item{
   color: #2C75FF !important;

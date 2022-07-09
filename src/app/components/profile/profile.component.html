@@ -2,62 +2,46 @@
     <div class="container">
         <!--user profile here-->
        <div class="userdetails " style="background-image: url('https://media.istockphoto.com/photos/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop-picture-id1341515382?k=20&m=1341515382&s=612x612&w=0&h=bDVy91iNDAQoENWYW8C41bsYarjrYyUWIHT3dOcVpn8='); width:1254px;height:438px; background-size: cover; background-repeat:no-repeat;">
-           
-        <div class="row">
-            <div class="col-lg-12 ">
-               
-   
-             
-           
-            </div>
-        </div>
-
-        <div class="card-columns" style="margin-top:19%; margin-left:10%">
-            
-            <div class="card">
-                <img  class="rounded-circle profile-img" style="margin-left: 14%;" src="https://s3-alpha-sig.figma.com/img/1876/8134/a6b79f7f980cd5f7788cb42a0e66cd75?Expires=1658102400&Signature=POinKnArnEwm31sX5nxJ0E7joJ-UDXoZZFO3br-z1Q-BYTYBd0wyqtGxhMy7p7WCeFNEN5yQv34i2GQUTAWwLFsLZRjJ-f03AsMvE3pFAjjLxChg92wB1ywrnc8UkvkW0BKu1F8YSkni9Ad~xNwmjxZ4ShjygLFbb8X7wZ9KCUda-9efyQzvoGQk9f7AhP99zO4LcskyoS0Gly-Wxep7hy4zHtwOecsyyYZWQBd8NynX4gFNYVu2-A8Ugr7fnDj6fi9Up5~-SVVkvgWI1j~w~OrfVwP8crNdaWvP4q7hhjvgvyUPb-zAcsHZOL4utOM5XigAP4sty6i~cznvWbSXvA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="profile-image"  width="70%">
-                <div class="card-body">
-                    <div class="text-center mt-3" >
-                   
-                        <h3 class="mt-4 h-font-semibold" >Sharonne Vanessah</h3>
-                        <p class="role">Counselor/lifecoach</p>
-                        <p class="p-description">shazzyvan@gmail.com</p>
+        <!--lOOP for profile starts here-->
+        <div class="row" *ngFor="let profile of profile" >
+            <div class="card-columns" style="margin-top:19%; margin-left:10%">
+                <div class="card">
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="text-center mt-3" >
+                            <img  class="rounded-circle profile-img" src="{{prof_pic_url + profile.prof_pic}}" alt="profile-image" width="60%">
+                            <h3 class="mt-4 h-font-semibold" >{{profile.user}}</h3>
+                            <p class="p-description"></p>
+                        </div>
                     </div>
-                    <h4 class="h-font-semibold">BIO</h4>
-
-                    <p class="p-description">There should be no boundaries to human endeavor. We are all different. </p>
-                    <a  href="" routerLink="/update" ><button class="btn text-dark" style="background-color:#f4b504; font-size: 1.3rem;">Update Profile</button></a>
+                    <div class="col-lg-1 col-md-1 col-sm-0"></div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 mt-3">
+                        <h4 class="h-font-semibold">BIO</h4>
+                        <p class="p-description">{{profile.bio}}</p>
+                        <a href="" routerLink="/update-profile" ><button class="btn  btn-orange">Update Profile</button></a>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-0"></div>
                 </div>
-               
             </div>
-           
-           
-                 
         </div>
-        <div class="card text-dark" style="width: 20%;background-color:#f4b504;margin-left: 10%;">
-              
-            <div class="card-body text-center">
-                
-          
-                <a href="http://"><i class="fa fa-twitter p-1" style="font-size:1.3rem; color:black;"  aria-hidden="true">Tweeter</i></a>
-            </div>
-            
-        </div> 
-        <div class="card text-dark" style="width: 20%; margin-top:2% ;background-color:#f4b504;margin-left: 10%; ">
-              
-            <div class="card-body text-center">
-                
-                <a href="sms:+18664504185?&body=Hi%2520there%252C%2520I%2527d%2520like%2520to%2520place%2520an%2520order%2520for..."><i class="fa fa-envelope " style="font-size:1.3rem; color:black; " aria-hidden="true">Send a Message</i></a>
-               
-            </div>
-        </div> 
+        <!--Loop ends here-->
+    </div>
+</div>
+<div class="card text-dark" style="width: 20%;background-color:#f4b504;margin-left: 10%;">
+    <div class="card-body text-center">
+        <a href="http://"><i class="fa fa-twitter p-1" style="font-size:1.3rem; color:black;"  aria-hidden="true">Tweeter</i></a>
+
+    </div>
+</div>
+<div class="card text-dark" style="width: 20%; margin-top:2% ;background-color:#f4b504;margin-left: 10%; ">
+    <div class="card-body text-center">
+        <a href=""><i class="fa fa-envelope " style="font-size:1.3rem; color:black; " aria-hidden="true">Send a Message</i></a>
+    </div>
+</div> 
    
-       </div>
-    </div> 
-      <!-- User posts here-->
+    <!-- User posts here-->
  <div class="userposts" style="display: inline-block; margin-left:49%">
     <h2>My Posts</h2>
-  <div class="card-columns" > 
+    <div class="card-columns" > 
      <!--loop card start-->
    
      <div class="card" style="width:100%;">
@@ -85,3 +69,18 @@
     
       
     </body>
+
+
+    
+
+
+
+
+   
+        
+        
+        
+        
+        
+           
+          
