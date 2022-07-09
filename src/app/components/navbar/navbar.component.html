@@ -1,10 +1,11 @@
 
-<nav class="navbar my-navbar navbar-expand-lg bg-white mb-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mb-5">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="https://imgur.com/sbUlQpy" alt="" />
-      MZAZI SPACE</a
-    >
+    <a class="navbar-brand"  style="padding-right: 5%;" href="#"><img src="../../../assets/brand.png"  height="30vh"  width="15vw" alt="" />MZAZI SPACE</a>
+  
+      <a class="nav-link" routerLink="/home"><img src="https://img.icons8.com/ios-glyphs/30/000000/home-page--v1.png"/><span class="sr-only">(current)</span></a>
+    
+    
     <button
       class="navbar-toggler border-0"
       type="button"
@@ -22,9 +23,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav" style="color: #2cdfff;">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item nav-active">
-          <a class="nav-link" routerLink="/home">HOME <span class="sr-only">(current)</span></a>
-        </li>
+       
         <li class="nav-item nav-active">
           <a class="nav-link" routerLink="/community">COMMUNITY</a>
         </li>
@@ -35,7 +34,8 @@
           <a class="nav-link" routerLink="/about">ABOUT</a>
         </li>
         <li class="nav-item nav-active">
-          <a class="nav-link" routerLink="/profile">PROFILE</a>
+          <a class="nav-link active " aria-current="page" id="profile " style="color: rgb(8, 8, 8); font-weight: bold" routerLink= "/profile/" height="20px" width="20px">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"/>Sharonne</a>
         </li>
        
       </ul>

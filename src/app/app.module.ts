@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -21,6 +21,7 @@ import { UpdateProfileComponent } from './components/profile/update-profile/upda
 import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 import { ChildservicesComponent } from './components/childservices/childservices.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes: Routes = [
   
   {path: 'home', component: HomepageComponent},
@@ -53,6 +54,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     NgbModule
   ],
