@@ -19,9 +19,6 @@ h1, h2{
   box-sizing: border-box;
 }
 
-/* body {
-  font-family: Arial, Helvetica, sans-serif;
-} */
 
 /* Float four columns side by side */
 .column {
@@ -42,7 +39,7 @@ h1, h2{
 
 .couns-header{
   margin-bottom: 5%;
-  margin-top: 5%;
+  /* margin-top: 1%; */
 }
 
 /* Responsive columns */
@@ -64,6 +61,7 @@ h1, h2{
 
 #counsel{
   margin-bottom: 27%;
+  justify-content: center;
   
 }
 
@@ -77,8 +75,8 @@ h1, h2{
   width: 100%;
   animation:slide 20s infinite;
   align-items: center;
-  
 }
+
 .content{
   color: #ffff;
   height: 100%;
@@ -103,43 +101,43 @@ h1, h2{
 }
 @keyframes slide{
   0%{
-      background-image: url("https://cdn.pixabay.com/photo/2015/11/06/11/48/multi-family-home-1026483_960_720.jpg");
+      background-image: url("/assets/cas2.jpg");
 
   }
   20%{
-      background-image: url("https://images.pexels.com/photos/5724030/pexels-photo-5724030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-image: url("/assets/cas1.jpg");
       
   }
   20.01%{
-      background-image: url("https://images.ctfassets.net/n1no4gieqp7s/7El2NZYDUtWhqUyIHeTsAo/99b6a1cc3d3464b1337cd2996191efa4/questions-to-ask-neighborhoods-OG.jpg?w=850&q=90");
+      background-image: url("/assets/cas3.jpg");
       
   }
   40%{
-      background-image: url("https://images.pexels.com/photos/1654330/pexels-photo-1654330.jpeg?auto=compress&cs=tinysrgb&w=1600");
+      background-image: url("/assets/cas2.jpg");
       
   }
   40.01%{
-      background-image: url("https://www.lasvegasrealestate.org/wp-content/uploads/2019/01/Las-Vegas-Homes-for-Sale-view2-e1547785320804.jpg");
+      background-image: url("/assets/cas2.jpg");
       
   }
   60%{
-      background-image: url("https://i.pinimg.com/originals/bc/a1/36/bca1361543fb70a95fe2e2c612b7b1e9.jpg");
+      background-image: url("/assets/cas2.jpg");
       
   }
   60.01%{
-      background-image: url("hhttps://cdn.stocksnap.io/img-thumbs/960w/suburban-street_JDQIGEGDBB.jpg");
+      background-image: url("/assets/cas2.jpg");
       
   }
   80%{
-      background-image: url("https://www.wqpmag.com/sites/wqp/files/5.5suburban-street-1388617-1280x960.jpg");
+      background-image: url("/assets/cas2.jpg");
       
   }
   80.01%{
-      background-image: url("https://static.neighborhoods.com/blog/media/community_1_inline-73ee14a835b452400aea1cb55acc2344.jpg");
+      background-image: url("/assets/cas2.jpg");
       
   }
   100%{
-      background-image: url("https://writers.personalseo.com/wp-content/uploads/2022/01/street-and-houses-of-upscale-neighborhood-on-a-summer-morning-1024x682.jpg");
+      background-image: url("/assets/cas2.jpg.jpg");
       
 
 }
