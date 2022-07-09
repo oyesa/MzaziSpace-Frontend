@@ -5,8 +5,8 @@
     position: absolute;
     width: 198px;
     height: 50px;
-    left: 660px;
-    color: blue;
+    left: 760px;
+    color: black;
     font-family: 'Rokkitt', serif;
     font-family: 'Yeseva One', cursive;
     margin-top: 3px;
@@ -15,8 +15,8 @@
     font-family: 'Yeseva One', cursive;
     color: #f4b504;
     font-weight: 300px;
-    font-size: 50px;
-    /* padding-top: 180px; */
+    font-size: 121px;
+    padding-top: 380px;
     /* line-height: 300px; */
     text-align: center;
     /* margin-top: 20px; */
@@ -26,9 +26,7 @@
     font-family: 'Rokkitt', serif;
     font-family: 'Yeseva One', cursive;
     color: #f4b504;
-    font-size: 20px;
-    
-
+    font-size: 45px;
 }
 
 #nav{
@@ -37,7 +35,7 @@
 } 
 #denis{
     /* background-image: url('https://images.pexels.com/photos/1149363/pexels-photo-1149363.jpeg?auto=compress&cs=tinysrgb&w=600'); */
-    background-image: url('http://cdn.cnn.com/cnnnext/dam/assets/190708110935-black-travel-movement---travel-noire-image4-super-tease.jpg');
+    background-image: url('/assets/andrae-ricketts-Q9_zv0LN4jU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
