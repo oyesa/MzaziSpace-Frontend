@@ -22,7 +22,7 @@ this.Profile()
 //buid edit form
 this.profileEditForm=this.formBuilder.group({
 'bio':new FormControl(''),
-'image':new FormControl(''),
+'prof_pic':new FormControl(''),
 'phone_number':new FormControl(''),
 
 

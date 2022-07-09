@@ -11,7 +11,7 @@ import { ServicesService } from 'src/app/services/services.service';
 export class ProfileComponent implements OnInit {
   profile!:Profile[]
  
-  image_url='https://www.flaticon.com/free-icon/user_3237472?term=profile%20picture&page=1&position=25&page=1&position=25&related_id=3237472&origin=tag'
+  prof_pic_url='http://res.cloudinary.com/dim8pysls/image/upload/v1639001486/x3mgnqmbi73lten4ewzv.png'
   constructor(private ServicesService:ServicesService) { }
   
   

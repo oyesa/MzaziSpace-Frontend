@@ -1,8 +1,6 @@
 export class Profile {
-        'id':number
-        'first_name':string
-        'last_name':string
+        'user': number
         'bio':string
-        'image':any
-        'phone_number':number 
+        'prof_pic':any
+        
 }

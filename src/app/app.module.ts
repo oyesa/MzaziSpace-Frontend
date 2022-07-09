@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -20,15 +22,15 @@ import { LoginComponent } from './components/login/login.component';
 import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
 import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
 import { ChildservicesComponent } from './components/childservices/childservices.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
+import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
+import { SpecialComponent } from './components/special/special.component';
+import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
+import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+
 const appRoutes: Routes = [
   
-  {path: 'home', component: HomepageComponent},
-  {path: 'community', component: CommunityComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'service', component: OurservicesComponent},
-  {path: 'testimonials', component: TestimonialsComponent},
 ]
 
 @NgModule({
@@ -47,9 +49,12 @@ const appRoutes: Routes = [
     TestimonialsComponent,
     SignupComponent,
     LoginComponent,
-    UpdateProfileComponent,
     FindcounselorComponent,
-    ChildservicesComponent
+    ChildservicesComponent,
+    SinglefathersComponent,
+    SpecialComponent,
+    WellbeingComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,9 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
-    NgbModule
+    NgbModule,
+    NgbDropdownModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,7 @@ font-family: 'Yeseva One', cursive; */
 
 .navbar-brand {
   font-weight: bold;
-  color: #073e39 !important;
+  color: black;
   font-family: 'Yeseva One', cursive !important;
   font-size: 17px;
 }
@@ -28,17 +28,16 @@ font-family: 'Yeseva One', cursive; */
   padding: 5px;
 }
 .nav-link:hover {
-  color: #092a31;
+  
   border-bottom: 4px solid #EDB82C;
 }
-.nav-active a {
-  color: #0b3b3d !important;
-  border-bottom: 4px solid #EDB82C;
-}
+
+
 .nav-active a {
   color: black;
   font-family: 'Yeseva One', cursive !important;
   font-size: 17px;
+  border-bottom: 4px solid #EDB82C;
 }
 /* .nav-item{
   color: #2C75FF !important;

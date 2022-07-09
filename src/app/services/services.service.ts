@@ -16,7 +16,7 @@ export class ServicesService {
   constructor(private http:HttpClient) { }
 
   Profile():Observable<Profile[]>{
-    return this.http.get<Profile[]>(`${this.API_URL}/profiles`);
+    return this.http.get<Profile[]>(`${this.API_URL}/profile/`);
   }
 
 }
