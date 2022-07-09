@@ -8,10 +8,11 @@ font-family: 'Yeseva One', cursive; */
   background-size: cover;
   background-repeat: no-repeat;
   height: 60vh;
-  margin-top: 7%;
-  margin-bottom: 15%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  padding-bottom: 60%;
   border-radius: 3%;
-  background: rgba(0, 0, 0, 0.5);
+  background: #000;
 }
 
 
@@ -34,10 +35,15 @@ p{
   font-weight: 500;
 }
 
-p {
+.lead{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* p {
   animation-duration: 3s;
   animation-name: slidein;
-}
+} */
 
 .call-buttons{
   color: #F4B504;
@@ -53,7 +59,7 @@ p {
   background-image : url("/assets/about1.jpg")
 }
 
-@keyframes slidein {
+/* @keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -63,6 +69,22 @@ p {
     margin-left: 0%;
     width: 100%;
   }
+} */
+
+
+.flex-container {
+  display: flex;
 }
 
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+}  
 
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
+.card-columns{
+  margin-top: 5%;
+}
