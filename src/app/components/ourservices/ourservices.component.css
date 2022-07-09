@@ -15,7 +15,11 @@ font-family: 'Yeseva One', cursive; */
   background: #000;
 }
 
-
+.card a{
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 1%;
+}
 h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
