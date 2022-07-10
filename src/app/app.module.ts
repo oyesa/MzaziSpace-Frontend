@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,7 @@ import { SinglefathersComponent } from './components/singlefathers/singlefathers
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -65,6 +67,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     NgbModule,
     NgbDropdownModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
   
   ],
   providers: [],
