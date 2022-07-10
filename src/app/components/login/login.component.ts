@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/auth-service.service';
 import { Router } from '@angular/router';
-import { MatSnackBar } from "@angular/material/snack-bar";
+// import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,12 +12,8 @@ export class LoginComponent implements OnInit {
   formGroup: FormGroup;
   // router: any;
 
-  constructor(public snackBar: MatSnackBar,private authService: AuthServiceService, private router: Router) { }
-  openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action, {
-       duration: 5000,
-    });
- } 
+  constructor(private authService: AuthServiceService, private router: Router) { }
+ 
   ngOnInit(): void { 
     this.initForm();
   }
