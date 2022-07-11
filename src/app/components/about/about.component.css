@@ -2,15 +2,22 @@
 font-family: 'Rokkitt', serif;
 font-family: 'Yeseva One', cursive; */
 
-h1{
+/* h1{
   font-family: 'Yeseva One', cursive;
   color: #F4B504;
-  /* margin-top: 7%;
-  margin-bottom: 17px; */
   font-size: 77px;
+} */
+
+h1{
+  text-align: center;
+  color: #F4B504;
+  font-size: 3.8rem;
 }
 
+h2{
+  font-family: 'Yeseva One', cursive;
 
+}
 p{
   letter-spacing: 0.5px;
   color: #000;
@@ -45,12 +52,7 @@ h5, h6{
   font-size: 22px;
 }
 
-.jumbotron{
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 3px 5px #888888;
-  margin-top: 5%; 
-}
+
 
 /* .btn{
   font-family: 'Montserrat', sans-serif;
@@ -100,9 +102,16 @@ h5, h6{
   margin-top: 3%;
 }
 
-#about-head{
+/* #about-head{
   padding-left: 15%;
   padding-bottom: 30%;
   padding-top: 13%;
-}
+} */
 
+.about-head{
+  color: #F4B504;
+  margin-top: 5%;
+  font-family: 'Yeseva One', cursive; 
+  font-size: 3.8rem;
+  margin-bottom: 3%;
+}
