@@ -21,11 +21,11 @@ export class NavbarComponent implements OnInit {
 
 ngOnInit(): void {
   this.http.get('http://localhost:8000/auth/user/', {withCredentials: true}).subscribe(
-    (res: any) => {
-      this.message = `Hello ${res.username}`;
+    (user: any) => {
+      this.message = `Hello ${user.username}`;
       Emitters.authEmitter.emit(true);
     },
-    err => {
+    _err => {
       this.message = 'You are not logged in';
       Emitters.authEmitter.emit(false);
     }
