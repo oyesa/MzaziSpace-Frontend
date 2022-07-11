@@ -4,26 +4,38 @@ font-family: 'Yeseva One', cursive; */
 
 h1{
   font-family: 'Yeseva One', cursive;
-  text-align: center;
   color: #F4B504;
   /* margin-top: 7%;
   margin-bottom: 17px; */
-  font-size: 44px;
+  font-size: 77px;
 }
-/* .mzazi-header{
-  
-} */
 
 
 p{
-  text-align: center;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: #000;
   font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 400;
   margin-bottom: 22px;
 }
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+/* @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+} */
 
 h5, h6{
   color: #F4B504;
@@ -40,11 +52,11 @@ h5, h6{
   margin-top: 5%; 
 }
 
-.btn{
+/* .btn{
   font-family: 'Montserrat', sans-serif;
   color: #6114D1;
   font-size: 17px;
-}
+} */
 
 /* .bout{
   background-image: url(/assets/commstaytog.jpg);
@@ -72,19 +84,25 @@ h5, h6{
   list-style: none;
   display: inline-block;
   padding: 8px 12px;
-  color: #6114D1;
+  /* color: #6114D1; */
   font-family: 'Montserrat', sans-serif;
 }
 
-.about{
+/* .about{
   margin-top: 7%;
   background-image: url(/assets/andrae-ricketts-Q9_zv0LN4jU-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3%;
-}
+} */
 .about-us{
   margin-top: 3%;
+}
+
+#about-head{
+  padding-left: 15%;
+  padding-bottom: 30%;
+  padding-top: 13%;
 }
 

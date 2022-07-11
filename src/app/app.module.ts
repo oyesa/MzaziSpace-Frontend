@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -16,6 +18,17 @@ import { MzazieventsComponent } from './components/mzazievents/mzazievents.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
+import { FindcounselorComponent } from './components/findcounselor/findcounselor.component';
+import { ChildservicesComponent } from './components/childservices/childservices.component';
+import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
+import { SpecialComponent } from './components/special/special.component';
+import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
+import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+import { PostsComponent } from './components/posts/posts.component';
+
+
+
 const appRoutes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'community', component: CommunityComponent},
@@ -38,12 +51,27 @@ const appRoutes: Routes = [
     MzazieventsComponent,
     TestimonialsComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    FindcounselorComponent,
+    ChildservicesComponent,
+    SinglefathersComponent,
+    SpecialComponent,
+    WellbeingComponent,
+    UpdateProfileComponent,
+    PostsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing: true})
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
+    NgbModule,
+    NgbDropdownModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
