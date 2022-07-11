@@ -7,9 +7,6 @@ body{
   background-image: url("/assets/about77.png");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.7);
-  /* opacity: 0.8; */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
 }
 
 
@@ -33,7 +30,7 @@ h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
   color: #fff;
-  margin-top: 17%;
+  margin-top: 4%;
   font-size: 44px;
   font-weight: 700;
 }
@@ -45,13 +42,13 @@ p{
   font-family: 'Montserrat', sans-serif;
   font-size: 21px;
   margin-bottom: 27px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .lead{
   padding-left: 3%;
   padding-right: 3%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 /* p {
@@ -97,7 +94,7 @@ p{
 } 
 
 .card-columns{
-  margin-top: 7%;
+  margin-top: 4%;
 }
 
 i {
