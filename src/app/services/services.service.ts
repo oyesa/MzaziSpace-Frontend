@@ -18,7 +18,8 @@ export class ServicesService {
   constructor(private http:HttpClient) { }
 
   Profile():Observable<Profile[]>{
-    return this.http.get<Profile[]>(`${this.API_URL}/auth/users`);
+    return this.http.get<Profile[]>(`${this.API_URL}/profile/username/`);
+    // return this.http.get<Profile[]>(`${this.API_URL}/auth/users`);
   }
 
 //   Posts():Observable<Posts[]>{

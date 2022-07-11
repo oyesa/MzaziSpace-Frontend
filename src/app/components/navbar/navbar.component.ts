@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Emitters} from '../../emitters/emitter';
 import {HttpClient} from '@angular/common/http';
+import { Router } from '@angular/router';
+import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @Component({
