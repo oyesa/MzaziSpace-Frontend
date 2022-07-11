@@ -19,6 +19,10 @@ export class AuthServiceService {
     // console.log('mzazi space')
     return this.http.post('http://127.0.0.1:8000/auth/register/',data);
   }
+
+  getUser(){
+    return this.http.get('http://127.0.0.1:8000/auth/user/')
+  }
   
   // loginUser(data: any): Observable<any>{
   //   var user = JSON.stringify(data)

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from 'src/app/services/services.service';
-import { Profile } from 'src/app/classes/profile';
+import { Profile } from 'src/app/classes/profile';  
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
