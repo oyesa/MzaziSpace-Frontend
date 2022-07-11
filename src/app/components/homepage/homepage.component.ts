@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { AuthServiceService } from 'src/app/auth-service.service';
+
 
 @Component({
   selector: 'app-homepage',
@@ -12,7 +14,7 @@ export class HomepageComponent implements OnInit {
   
   images = [700, 800, 807].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig, private authService:AuthServiceService) {
     // 
     config.interval = 2000;
     config.keyboard = true;
@@ -21,6 +23,9 @@ export class HomepageComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.authService.getUser().subscribe((response:any)=>{
+      console.log(response)
+    })
   }
 
 }
