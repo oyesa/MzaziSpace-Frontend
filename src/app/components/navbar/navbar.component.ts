@@ -23,27 +23,27 @@ export class NavbarComponent implements OnInit {
 }
 
 ngOnInit(): void {
-  this.http.get('http://localhost:8000/auth/user/', {withCredentials: true}).subscribe(
-    (user: any) => {
-      this.message = `Hello ${user.username}`;
-      Emitters.authEmitter.emit(true);
-    },
-    _err => {
-      this.message = 'You are not logged in';
-      Emitters.authEmitter.emit(false);
-    }
-  );
-  Emitters.authEmitter.subscribe(
-    (auth: boolean) => {
-      this.authenticated = auth;
-    }
-  );
+  // this.http.get('http://localhost:8000/auth/user/', {withCredentials: true}).subscribe(
+  //   (user: any) => {
+  //     this.message = `Hello ${user.username}`;
+  //     Emitters.authEmitter.emit(true);
+  //   },
+  //   _err => {
+  //     this.message = 'You are not logged in';
+  //     Emitters.authEmitter.emit(false);
+  //   }
+  // );
+  // Emitters.authEmitter.subscribe(
+  //   (auth: boolean) => {
+  //     this.authenticated = auth;
+  //   }
+  // );
 }
 
-logout(): void {
-  this.http.post('http://localhost:8000/auth/logout/', {}, {withCredentials: true})
-    .subscribe(() => this.authenticated = false);
+// logout(): void {
+//   this.http.post('http://localhost:8000/auth/logout/', {}, {withCredentials: true})
+//     .subscribe(() => this.authenticated = false);
     
-}
+// }
 
 }
