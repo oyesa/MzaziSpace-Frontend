@@ -44,6 +44,33 @@
             </div>
         </ng-template>
 
+ <div class="card my-3 custom-card" *ngIf="post">
+  <div class="card-header">
+    <div class="d-flex">
+      <p class="ml-auto my-auto">
+        <strong><i class="fa fa-ellipsis-h" aria-hidden="true"></i></strong>
+      </p>
+    </div>
+  </div>
+  <div class="card-body p-0 m-0">
+    <p class="pl-3 pt-3">{{ post}}</p>
+    <img
       
+      src="{{selectedImage}}"
+      class="img-fluid"
+    />
+    <div class="d-flex">
+      <i class="post-icons fa mx-3 mt-3 fa-comment-o" aria-hidden="true"></i>
+      <i class="post-icons fa mx-3 mt-3 fa-heart" aria-hidden="true"></i>
+      <!-- <i class="post-icons fa mx-3 mt-3 fa-heart-o" aria-hidden="true"></i> -->
+      <i class="post-icons fa mx-3 mt-3 fa-share-alt" aria-hidden="true"></i>
+      <i class="post-icons fa ml-auto mr-3 mt-3 fa-bookmark-o" aria-hidden="true"></i>
+      <!-- <i class="post-icons fa mx-3 mt-3 fa-bookmark-o float-right" aria-hidden="true"></i> -->
+    </div>
+  </div>
+ 
+</div>
+
+     
     
   
