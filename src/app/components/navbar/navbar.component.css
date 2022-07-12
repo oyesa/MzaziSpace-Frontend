@@ -13,8 +13,8 @@ font-family: 'Yeseva One', cursive; */
 
 .navbar-brand {
   font-weight: bold;
-  color: #2C75FF !important;
-  font-family: 'Yeseva One', cursive !important;
+  color: black;
+  font-family: 'Yeseva One', cursive;
   font-size: 17px;
 }
 .navbar-brand img {
@@ -28,15 +28,24 @@ font-family: 'Yeseva One', cursive; */
   padding: 5px;
 }
 .nav-link:hover {
-  color: #2C75FF;
-  border-bottom: 4px solid #EDB82C;
+  border-bottom: 2px solid #EDB82C;
 }
+
+#navbarDropdown{
+  font-family: 'Yeseva One', cursive;
+  font-size: 17px;
+  color: black;
+}
+
+.dropdown-item{
+  font-family: 'Yeseva One', cursive;
+  font-size: 17px;
+  color: black;
+}
+
 .nav-active a {
-  color: #2C75FF !important;
-  font-family: 'Yeseva One', cursive !important;
+  color: black;
+  font-family: 'Yeseva One', cursive;
   font-size: 17px;
 }
-/* .nav-item{
-  color: #2C75FF !important;
-  font-family: 'Montserrat', sans-serif !important;
-} */
+

@@ -1,0 +1,149 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Yeseva One', cursive; */
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2{
+  font-family: 'Yeseva One', cursive;
+  text-align: center;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 21px;
+}
+
+.container-cards{
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.couns-header{
+  margin-bottom: 5%;
+  /* margin-top: 1%; */
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #EDB82C;
+}
+
+#counsel{
+  margin-bottom: 27%;
+  justify-content: center;
+  
+}
+
+.slider{
+  height: 80vh;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  animation:slide 20s infinite;
+  align-items: center;
+}
+
+.content{
+  color: #ffff;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.principal{
+  left: 50%;
+  top:50% ;
+  transform: translate(-50%,-50%) ;
+  position: absolute;
+  letter-spacing: 4px;
+  text-align: center;
+
+}
+.principal h3{
+  font-size: 35px;
+
+}
+.principal p{
+  font-size:15px;
+}
+@keyframes slide{
+  0%{
+      background-image: url("/assets/cas2.jpg");
+
+  }
+  20%{
+      background-image: url("/assets/cas1.jpg");
+      
+  }
+  20.01%{
+      background-image: url("/assets/cas3.jpg");
+      
+  }
+  40%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  40.01%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  60%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  60.01%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  80%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  80.01%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  100%{
+      background-image: url("/assets/cas2.jpg.jpg");
+      
+
+}
+}

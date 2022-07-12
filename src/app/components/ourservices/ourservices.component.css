@@ -1,0 +1,113 @@
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Yeseva One', cursive; */
+
+body{
+  background-image: url("/assets/about77.png");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* opacity: 0.8; */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
+
+
+
+.container{
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  height: 80vh;
+  margin-bottom: 10% !important;
+  /* padding-bottom: 60%; */
+  border-radius: 3%;
+}
+
+.card a{
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 1%;
+}
+
+h1{
+  font-family: 'Yeseva One', cursive;
+  text-align: center;
+  color: #fff;
+  margin-top: 17%;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+p{
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  margin-bottom: 27px;
+  font-weight: 500;
+}
+
+.lead{
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 5%;
+}
+
+/* p {
+  animation-duration: 3s;
+  animation-name: slidein;
+} */
+
+.call-buttons{
+  color: #F4B504;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  padding: 1%;
+  /* display: inline-block; */
+}
+
+
+/* @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+} */
+
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
+.card-columns{
+  margin-top: 7%;
+}
+
+i {
+  background-color: #D3D3D3;
+  border-radius: 50%;
+  padding: 10px;
+  color: #000;
+}
+
+.card-body{
+  margin-bottom: 5%;
+}
+

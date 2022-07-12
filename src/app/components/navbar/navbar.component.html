@@ -1,10 +1,20 @@
 
-<nav class="navbar my-navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mb-5">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="https://imgur.com/sbUlQpy" alt="" />
-      MZAZI SPACE</a
-    >
+    <div>
+      <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="!authenticated">
+        <li class="nav-item">
+          <a class="navbar-brand"  style="padding-right: 5%;" href="#">MZAZI SPACE</a>
+        </li>
+        
+      </ul>
+    
+  </div>
+  <div>
+
+     
+    
+    <div class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="authenticated">
     <button
       class="navbar-toggler border-0"
       type="button"
@@ -20,13 +30,15 @@
         data-inline="false"
       ></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav" style="color: #2C75FF;">
+    <div class="collapse navbar-collapse" id="navbarNav">
+    
       <ul class="navbar-nav ml-auto">
         <li class="nav-item nav-active">
-          <a class="nav-link" routerLink="/home">HOME <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/home"><img src="https://img.icons8.com/ios-glyphs/30/000000/home-page--v1.png"/><span class="sr-only">(current)</span></a>
         </li>
+       
         <li class="nav-item nav-active">
-          <a class="nav-link" href="">COMMUNITY</a>
+          <a class="nav-link" routerLink="/community">COMMUNITY</a>
         </li>
         <li class="nav-item nav-active">
           <a class="nav-link" routerLink="/service">SERVICES</a>
@@ -34,8 +46,26 @@
         <li class="nav-item nav-active">
           <a class="nav-link" routerLink="/about">ABOUT</a>
         </li>
+        
+        <li class="nav-item dropdown" ngbDropdown class="d-inline-block">
+          <a class="nav-link dropdown-toggle" href="#" ngbDropdownToggle 
+                 id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            USER <span *ngIf=""></span>
+          </a>
+          <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+            <li><a class="dropdown-item" routerLink="/logout">Logout</a></li>
+            
+           
+          </ul>
+        </li>  
+       
       </ul>
     </div>
   </div>
+  </div>
+  </div>
 </nav>
+<!-- <hr class="line" style="background-color: #f4b504 ; height:0.1rem; position: sticky;"> -->
+
 

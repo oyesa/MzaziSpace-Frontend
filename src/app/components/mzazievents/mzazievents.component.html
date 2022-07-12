@@ -1,1 +1,60 @@
-<p>mzazievents works!</p>
+<br>
+<br>
+<div class="container">
+<div class="cards">
+    <div class="card events">
+      <img src="https://cdn.stayhappening.com/events2/banners/ad5bd06aded1686d38cddf4c3ee61a219b3111d617f53818d6079cfeb71333ed-rimg-w960-h540-gmir.jpg?v=1654985498" alt="" />
+      <div class="card-info">
+        <p class="card-text" style="color: #000;font-family: 'Rokkitt', serif;">Single parenting doesn't mean parenting alone. <br>This backyard family dinner event is designed to help single parents and their kids connect to a likeminded and vibrant community. No childcare will be available, as kids are invited and encouraged to join. Please bring chairs or blankets for your family; food is provided. </p>
+        
+        <button class="btn btn-light" style="border-radius: 10px;box-shadow: 2px 2px black; background-color: #f4b504; color: #000; border: none;" (click)="open(mymodal)">Get Involved</button>
+        <ng-template #mymodal let-modal>
+            <div class="modal-header">
+            
+              <div class="md-form mb-4">
+                <h4 class="modal-title" id="modal-basic-title">Mzazi Space Events</h4>
+                
+
+                <i class="fas fa-envelope prefix grey-text"></i>
+                <input type="email" id="form2" style="border-radius: 3px;box-shadow: 2px 2px #000; background-color: rgba(138, 132, 132, 0.322); color: #000; border: none;"class="form-control validate">
+                <label data-error="wrong" data-success="right" for="form2">Your email</label>
+              </div><br>
+              
+              
+            </div>
+        
+            <p>An email will be sent to you regarding the event. See you there!</p>
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" style="border-radius: 10px;box-shadow: 2px 2px black; background-color: #f4b504; color: #000; border: none;" (click)="modal.close('Save click')">Send</button>
+            </div>
+          </ng-template>
+      </div>
+      
+    </div>
+    <div class="card events">
+      <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F310829099%2F12603182011%2F1%2Foriginal.20220629-191203?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2880%2C1440&s=216813932d0f684a62b598a9e5bd16c6" alt="" />
+      <div class="card-info">
+        <p class="card-text" style="color: #000;font-family: 'Rokkitt', serif;">SINGLE PARENT FAIR is a FUN, FREE event at our Jefferson Campus where Grace has the chance to care and show appreciation for the single parents in our local community and church.</p>
+        
+        <button class="btn btn-light" style="border-radius: 10px;box-shadow: 2px 2px black; background-color: #f4b504; color: #000; border: none;" (click)="open(mymodal)">Get Involved</button>
+              </div>
+      
+    </div>
+    <div class="card events">
+      <img src="https://pbs.twimg.com/media/EwgqGT5XAAEEq7b.jpg" alt="" />
+      <div class="card-info">
+        <p class="card-text" style="color: #000;font-family: 'Rokkitt', serif;">Did you know 21st March is #SingleParentsDay?<br>
+
+            Single parents have been doing an incredible job in challenging circumstances - this year more than ever.
+            
+            We want to recognise that! Share your stories of #SingleParentStrength.
+        </p>
+        <button class="btn btn-light" style="border-radius: 10px;box-shadow: 2px 2px black; background-color: #f4b504; color: #000; border: none;" (click)="open(mymodal)">Get Involved</button>
+
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
