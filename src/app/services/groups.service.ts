@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Community } from 'src/app/classes/community';
+import {Groups } from 'src/app/classes/groups';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommunityService {
+export class GroupsService {
   api_link: string = "https://mzazispace.herokuapp.com/"
 
   constructor(private http: HttpClient) { }
 
-  Community():Observable<Community[]>{
-    return this.http.get<Community[]>(this.api_link + `request/community/`)
+  Groups():Observable<Groups[]>{
+    return this.http.get<Groups[]>(this.api_link + `request/  groups/`)
   }
 }
