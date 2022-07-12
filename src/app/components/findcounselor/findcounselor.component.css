@@ -10,6 +10,13 @@ h1, h2{
   font-family: 'Yeseva One', cursive;
   text-align: center;
 }
+p{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 21px;
+}
 
 .container-cards{
   box-sizing: border-box;
@@ -19,9 +26,6 @@ h1, h2{
   box-sizing: border-box;
 }
 
-/* body {
-  font-family: Arial, Helvetica, sans-serif;
-} */
 
 /* Float four columns side by side */
 .column {
@@ -42,7 +46,7 @@ h1, h2{
 
 .couns-header{
   margin-bottom: 5%;
-  margin-top: 5%;
+  /* margin-top: 1%; */
 }
 
 /* Responsive columns */
@@ -62,11 +66,86 @@ h1, h2{
   background-color: #EDB82C;
 }
 
-/* #counsel{
-  color: #f1f1f1;
-  margin-bottom: 3px;
+#counsel{
+  margin-bottom: 27%;
+  justify-content: center;
   
-} */
-/* .container-couns{
-  margin-top: 3%;
-} */
+}
+
+
+
+.slider{
+  height: 80vh;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  animation:slide 20s infinite;
+  align-items: center;
+}
+
+.content{
+  color: #ffff;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.principal{
+  left: 50%;
+  top:50% ;
+  transform: translate(-50%,-50%) ;
+  position: absolute;
+  letter-spacing: 4px;
+  text-align: center;
+
+}
+.principal h3{
+  font-size: 35px;
+
+}
+.principal p{
+  font-size:15px;
+}
+@keyframes slide{
+  0%{
+      background-image: url("/assets/cas2.jpg");
+
+  }
+  20%{
+      background-image: url("/assets/cas1.jpg");
+      
+  }
+  20.01%{
+      background-image: url("/assets/cas3.jpg");
+      
+  }
+  40%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  40.01%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  60%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  60.01%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  80%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  80.01%{
+      background-image: url("/assets/cas2.jpg");
+      
+  }
+  100%{
+      background-image: url("/assets/cas2.jpg.jpg");
+      
+
+}
+}

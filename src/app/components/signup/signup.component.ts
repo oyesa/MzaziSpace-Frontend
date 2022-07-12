@@ -48,13 +48,14 @@ export class SignupComponent implements OnInit {
         }
     };
     
-      this.authService.login(loginCredentials).subscribe(result =>{
+      this.authService.signup(loginCredentials).subscribe(result =>{
         console.log('Here we are',result)
-        if(result.success){
+        this.router.navigate(['/login']);
+        if(result.email){
           console.log(result);
-          alert(result.message);
+          alert("Registered successfully");
         }else{
-          alert(result.message)
+          alert('Holla!!You have been signed up to Mzazi Space')
         }
 
       });
