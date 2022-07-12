@@ -26,6 +26,7 @@ import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostsComponent } from './components/posts/posts.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
