@@ -13,7 +13,7 @@ export class AuthServiceService {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Access-Control-Allow-Headers': 'Content-Type',
-      'Authorization': `Bearer ${JSON.parse(localStorage.getItem('token')) }`
+      'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
     }
   )
 
@@ -26,11 +26,13 @@ requestOptions = { headers: this.headers };
   signup(data):Observable<any>{
     return this.http.post('http://127.0.0.1:8000/auth/register/',data);
   }
-
-  getUser(){
-    return this.http.get('http://127.0.0.1:8000/auth/user/')
+    
+  getUser(userName): Observable<any>{
+   
+    return this.http.get(`${this.url}/auth/user/`).pipe(map(responce => responce));
   }
   getUserProfile(userName): Observable<any>{
-    return this.http.get(`${this.url}/auth/profile/${userName}`, this.requestOptions).pipe(map(responce => responce))
+    console.log(this.requestOptions)
+    return this.http.get(`${this.url}/auth/profile/${userName}/`, this.requestOptions).pipe(map(responce => responce))
   }
 }
