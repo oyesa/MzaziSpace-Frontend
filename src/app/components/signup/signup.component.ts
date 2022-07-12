@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthServiceService } from 'src/app/auth-service.service';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 // import { AuthService } from 'src/app/services/auth.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-
+// import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,10 +14,12 @@ export class SignupComponent implements OnInit {
   formGroup: FormGroup;
 
   constructor(
+  
     private authService: AuthServiceService,
     private http: HttpClient,
     private router: Router
     ) {}
+
 
     response!: any;
     message!: string;
@@ -25,6 +27,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
   }
+  
   initForm(){
     this.formGroup = new FormGroup({
       email: new FormControl('',[Validators.required]),
@@ -51,12 +54,12 @@ export class SignupComponent implements OnInit {
       this.authService.signup(loginCredentials).subscribe(result =>{
         console.log('Here we are',result)
         this.router.navigate(['/login']);
-        if(result.email){
-          console.log(result);
-          alert("Registered successfully");
-        }else{
-          alert('Holla!!You have been signed up to Mzazi Space')
-        }
+        // if(result.email){
+        //   console.log(result);
+        //   alert("Registered successfully");
+        // }else{
+        //   alert('Holla!!You have been signed up to Mzazi Space')
+        // }
 
       });
     }
@@ -79,4 +82,6 @@ export class SignupComponent implements OnInit {
 //         this.router.navigate(['/login']);
 //       });
 //   }
+
+  
 }
