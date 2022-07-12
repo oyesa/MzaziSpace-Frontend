@@ -16,13 +16,15 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 export class NavbarComponent implements OnInit {
   authenticated = false;
   message = 'You are not logged in';
+  userToken: string
 
 
-  
- constructor(private http: HttpClient) {
+
+ constructor(private http: HttpClient, private router: Router) {
 }
 
 ngOnInit(): void {
+  this.userToken = localStorage.getItem('token')
   this.http.get('http://localhost:8000/auth/user/', {withCredentials: true}).subscribe(
     (user: any) => {
       this.message = `Hello ${user.username}`;
@@ -41,9 +43,8 @@ ngOnInit(): void {
 }
 
 logout(): void {
-  this.http.post('http://localhost:8000/auth/logout/', {}, {withCredentials: true})
-    .subscribe(() => this.authenticated = false);
-    
+ localStorage.removeItem('token')
+ this.router.navigate(['/']);
 }
 
 }
