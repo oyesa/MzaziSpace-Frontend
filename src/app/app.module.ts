@@ -66,14 +66,11 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-<<<<<<< HEAD
-    BrowserAnimationsModule
-=======
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     NgbModule,
     NgbDropdownModule,
   
->>>>>>> e405599fccbb3b50f528348bff657676b3e16e24
   ],
   providers: [],
   bootstrap: [AppComponent]
