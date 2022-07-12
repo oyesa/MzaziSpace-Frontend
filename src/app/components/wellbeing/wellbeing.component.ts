@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from "src/app/post";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-wellbeing',
@@ -9,19 +10,12 @@ import { Post } from "src/app/post";
   styleUrls: ['./wellbeing.component.css']
 })
 export class WellbeingComponent {
-  
   closeResult: string = '';
-  
-  constructor(private modalService: NgbModal, private postService: PostService ) {}
-    
-  open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-  
+  post: string = '';
+  selectedImage!:File|any;
+  @Output() newPost: EventEmitter<Post> = new EventEmitter();
+  constructor(private modalService: NgbModal, private postService: PostService, private route:Router) {}
+  ngOnInit(): void {}
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
@@ -31,7 +25,27 @@ export class WellbeingComponent {
       return  `with: ${reason}`;
     }
   }
-  onSubmit(text: string) {
-    
+  uploadFile(event: any): void {
+    this.selectedImage = event.target.files[0];
   }
-}
+  addPost(): void {
+    const fd = new FormData();
+    if (this.post.length > 10) {
+      if (this.selectedImage) {
+        fd.append('image', this.selectedImage, this.selectedImage.name);
+      }
+      fd.append('post', this.post);
+     
+      
+    }
+  }
+  open(content:any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  
+  
+  }
