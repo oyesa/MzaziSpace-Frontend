@@ -20,3 +20,16 @@ h4{
     margin: auto; 
     width: 50%;
 }
+.business{
+    margin-left: 4rem;
+    width: 100%;
+}
+.modal-title{
+    display:inline;
+    margin-left: 4rem;
+    font-size: 20px;
+}
+h3{
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+}
