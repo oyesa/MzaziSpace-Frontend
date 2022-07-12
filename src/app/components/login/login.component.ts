@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
   // router: any;
 
   constructor(private authService: AuthServiceService, private router: Router) { }
- 
-  ngOnInit(): void { 
+
+  ngOnInit(): void {
     this.initForm();
   }
   initForm(){
@@ -23,17 +23,6 @@ export class LoginComponent implements OnInit {
       password: new FormControl('',[Validators.required])
     });
   }
-  // loginUser = () => {
-  //   if (this.form.valid) {
-  //       this.isLoading = true;
-  //       const loginCredentials: IAuthBody = {
-  //           email: this.form.controls.email.value,
-  //           password: this.form.controls.password.value
-  //       };
-  //       this.authService.authenticateUserWithServer(loginCredentials).subscribe(
-  //           res => {
-  //               this.isLoading = false;
-  //               this.snackBar.showSuccessSnackBar(this.successMessage);
 
   loginProcess(){
     if(this.formGroup.valid){
@@ -43,28 +32,22 @@ export class LoginComponent implements OnInit {
         password: this.formGroup.controls['password'].value
         }
     };
-    
-      this.authService.login(loginCredentials).subscribe(result =>{
-        console.log(result)
-        this.router.navigate(['/home']);
-        // if(result.success){
-          // console.log(result);
-        //   alert('Logged in successfully');
-        // }else{
-        //   alert('Ooops')
-        // }
-        // this.router.navigate(['/home']);
-        // console.log(result)
-        // if(result.password){
-          // console.log(result);
-        //   alert('Logged in successfully');
-        // }else{
-        //   alert('Ooops')
-        //   console.log(result)
-        // }
 
+      this.authService.login(loginCredentials).subscribe(result =>{
+        const token = result["CustomUser"]["token"]
+        localStorage.setItem("token",JSON.stringify(token) )
+        this.getProfile(result["CustomUser"]["username"])
+        this.router.navigate(['/home']);
       });
     }
+  }
+  getProfile(userName){
+    this.authService.getUserProfile(userName).subscribe(result=>{
+      console.log(result)
+    }, err => {
+      console.log(err)
+    })
+
   }
 
 }
