@@ -1,48 +1,36 @@
 <body>
-  <div class="container">
+  <div class="container mt-5">
       <!--user profile here-->
-     <div class="userdetails " style="background-image: url('https://media.istockphoto.com/photos/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop-picture-id1341515382?k=20&m=1341515382&s=612x612&w=0&h=bDVy91iNDAQoENWYW8C41bsYarjrYyUWIHT3dOcVpn8='); width:1254px;height:438px; background-size: cover; background-repeat:no-repeat;">
+     <div class="userdetails " style="background-image: url('https://media.istockphoto.com/photos/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop-picture-id1341515382?k=20&m=1341515382&s=612x612&w=0&h=bDVy91iNDAQoENWYW8C41bsYarjrYyUWIHT3dOcVpn8='); width:1254px;height:438px; background-size: cover; background-repeat:no-repeat; border-radius:10px; opacity:0.8rem">
       <!--lOOP for profile starts here-->
-      <div class="row"  >
-        <!-- <div class="row" *ngFor="let profile of profile" > -->
-          <div class="card-columns" style="margin-top:19%; margin-left:10% ; ">
-              <div class="card" style="padding-bottom:10%">
-                  <!-- <div class="col-lg-8 col-md-6 col-sm-12"> -->
-                      <div class="text-center mt-5">
-                        <img  class="rounded-circle profile-img" src="../../../assets/person.1.png" alt="profile-image" width="60%">
+    
+            
+                      <div class="img-responsive "   >
+                        <img  class="rounded-circle profile-img" src="../../../assets/person.1.png" alt="profile-image" width="20%" style="margin-top:25%; margin-left:6% ;  ">
                           <!-- <img  class="rounded-circle profile-img" src="{{prof_pic_url + profile.prof_pic}}" alt="profile-image" width="60%"> -->
                           <!-- <h3 class="mt-4 h-font-semibold" >{{profile.user}}</h3> -->
-                          <h3 class="mt-4 h-font-semibold" >Sharonne Vanessa</h3>
-                          <p class="p-description">sharonne@gmail.com</p>
-                      </div>
+        
+                     <div class="row">
+                      
+                        
+                     
+                      <div class=" d-inline mt-0 " style="float:right;">
+                        <h4 class="h-font-semibold">BIO</h4>
+                        <!-- <p class="p-description">{{profile.bio}}</p> -->
+                        <p class="p-description">I love Data</p>
+                        <a href="" routerLink="/update" ><button class="btn  btn-orange">Update Profile</button></a>
+                    </div>
                   <!-- </div> -->
-                 
-                  <div class="col-lg-8 col-md-5 col-sm-12 mt-3 text-center">
-                      <h4 class="h-font-semibold">BIO</h4>
-                      <!-- <p class="p-description">{{profile.bio}}</p> -->
-                      <p class="p-description">I love Data</p>
-                      <a href="" routerLink="/update" ><button class="btn  btn-orange">Update Profile</button></a>
-                  </div>
+                </div>
+            </div>
+                  
                   
               </div>
           </div>
-      </div>
+     
       <!--Loop ends here-->
-  </div>
-</div>
-<!-- <div class="card text-dark" style="width: 20%;background-color:#f4b504;margin-left: 10%;">
-  <div class="card-body text-center">
-      <a href="http://"><i class="fa fa-twitter p-1" style="font-size:1.3rem; color:black;"  aria-hidden="true">Tweeter</i></a>
-
-  </div>
-</div>
-<div class="card text-dark" style="width: 20%; margin-top:2% ;background-color:#f4b504;margin-left: 10%; ">
-  <div class="card-body text-center">
-      <a href=""><i class="fa fa-envelope " style="font-size:1.3rem; color:black; " aria-hidden="true">Send a Message</i></a>
-  </div>
-</div>  -->
  
-  <!-- User posts here-->
+
   
    <div class="userposts" style="margin-top:15%">
     <div class="row">

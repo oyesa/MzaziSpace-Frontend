@@ -41,8 +41,12 @@ export class LoginComponent implements OnInit {
       });
     }
   }
-  getProfile(userName){
-    this.authService.getUserProfile(userName).subscribe(result=>{
+  getProfile(username){
+    this.authService.getUserProfile(username).subscribe(result=>{
+      const token = result["CustomUser"]["token"]
+      localStorage.setItem("token",JSON.stringify(token) )
+      this.getProfile(result["CustomUser"]["username"])
+      this.router.navigate(['/profile']);
       console.log(result)
     }, err => {
       console.log(err)

@@ -166,9 +166,9 @@ position: relative;
     }
 
     .person-img {
-        height: 250px;
+        height: 240px;
         position: relative; 
-        width: 250px; 
+        width: 240px; 
         overflow: hidden; 
         border-radius: 50%;
         border: 2px solid #f4b504;
@@ -184,7 +184,7 @@ position: relative;
 .person1, .person2, .person3{
   border: 0px solid #f4b504;
 
-  padding: 30px;
+  padding: 35px;
   background-color: white;
 }
 

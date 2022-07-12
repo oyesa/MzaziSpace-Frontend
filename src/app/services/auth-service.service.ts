@@ -17,20 +17,26 @@ export class AuthServiceService {
     }
   )
 
+
 requestOptions = { headers: this.headers };
+
 
   constructor(private http: HttpClient) {}
   login(data):Observable<any>{
+   
     return this.http.post(`${this.url}/auth/login/`,data).pipe(map(responce => responce));
   }
   signup(data):Observable<any>{
-    return this.http.post('http://127.0.0.1:8000/auth/register/',data);
+    return this.http.post(`${this.url}/auth/register/`,data)
   }
+    
+  getUser(userName): Observable<any>{
+   
+    return this.http.get(`${this.url}/auth/user/`).pipe(map(responce => responce));
+  }
+  getUserProfile(username): Observable<any>{
+    console.log(this.requestOptions)
+    return this.http.get(`${this.url}/auth/profile/${username}`, this.requestOptions).pipe(map(responce => responce))
 
-  getUser(){
-    return this.http.get('http://127.0.0.1:8000/auth/user/')
-  }
-  getUserProfile(userName): Observable<any>{
-    return this.http.get(`${this.url}/auth/profile/${userName}`, this.requestOptions).pipe(map(responce => responce))
   }
 }

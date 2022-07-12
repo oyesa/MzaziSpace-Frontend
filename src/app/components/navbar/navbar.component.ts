@@ -25,21 +25,21 @@ export class NavbarComponent implements OnInit {
 
 ngOnInit(): void {
   this.userToken = localStorage.getItem('token')
-  this.http.get('http://localhost:8000/auth/user/', {withCredentials: true}).subscribe(
-    (user: any) => {
-      this.message = `Hello ${user.username}`;
-      Emitters.authEmitter.emit(true);
-    },
-    _err => {
-      this.message = 'You are not logged in';
-      Emitters.authEmitter.emit(false);
-    }
-  );
-  Emitters.authEmitter.subscribe(
-    (auth: boolean) => {
-      this.authenticated = auth;
-    }
-  );
+  // this.http.get('https://mzazispace.herokuapp.com/auth/user/', {withCredentials: true}).subscribe(
+  //   (user: any) => {
+  //     this.message = `Hello ${user.username}`;
+  //     Emitters.authEmitter.emit(true);
+  //   },
+  //   _err => {
+  //     this.message = 'You are not logged in';
+  //     Emitters.authEmitter.emit(false);
+  //   }
+  // );
+  // Emitters.authEmitter.subscribe(
+  //   (auth: boolean) => {
+  //     this.authenticated = auth;
+  //   }
+  // );
 }
 
 logout(): void {
