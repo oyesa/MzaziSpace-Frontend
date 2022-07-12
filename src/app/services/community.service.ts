@@ -6,7 +6,7 @@ import {Community } from 'src/app/classes/community';
 @Injectable({
   providedIn: 'root'
 })
-export class StoryService {
+export class CommunityService {
   api_link: string = "https://mzazispace.herokuapp.com/"
 
   constructor(private http: HttpClient) { }
