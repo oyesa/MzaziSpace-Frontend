@@ -18,6 +18,7 @@ import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
 import { SpecialComponent } from './components/special/special.component';
 
+
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'home', component: HomepageComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'wellbeing', component: WellbeingComponent},
   {path: 'singlefathers', component: SinglefathersComponent},
   {path: 'special', component: SpecialComponent},
+ 
 ];
 
 @NgModule({

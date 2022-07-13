@@ -11,6 +11,8 @@
                           <div class="bio" style="margin-left:10%">
                           <h3 class="mt-4 h-font-semibold" >{{profile?.user?.f_name}} {{profile?.user?.l_name}}</h3>
                           <p class="p-description">{{profile?.user?.email}}</p>
+                          <p class="p-description">{{profile?.user?.user_role}}</p>
+                         
                       </div>
                     </div>
                     
@@ -23,7 +25,7 @@
     <div class="container-fluid">
                 
  
-        <a type="button" class="more-styles" 
+        <!-- <a type="button" class="more-styles" 
         [hidden]="!inboundClick" 
         (click)="inboundClick = !inboundClick" 
         [routerLink]="['/inbound']" href="">
@@ -33,16 +35,17 @@
         [hidden]="!outboundClick " 
         (click)="outboundClick = !outboundClick " 
         [routerLink]="['/outbound']" href="">
-     </a>
+     </a> -->
 
-
-              <div class="col-lg-8 col-md-5 col-sm-12 mt-3 text-center">
-                
-                <p class="p-description">{{profile.bio}}</p>
+    </div>
+              <div class="col-lg-12 col-md-5 col-sm-12 text-center" style="margin-left:16% ; margin-top: 5%;">
+                <h5>My Bio</h5>
+                <p class="p-description fw-200 fs-4">{{profile.bio}}</p>
                 <!-- <p class="p-description">I love Data</p> -->
-                <a (click)="updateProfile(profile)" ><button class="btn  btn-orange">Update Profile</button></a>
+                <a routerLink="/update" ><button class="btn  btn-orange">Update Profile</button></a>
+                <!-- <a (click)="updateProfile(profile)" ><button class="btn  btn-orange">Update Profile</button></a> -->
             </div>
-              <div class="container" style="margin-top:-8%; margin-left:30%">
+              <!-- <div class="container" style="margin-top:-8%; margin-left:30%">
                <div class="row d-flex justify-content-center align-items-center">
                  <div class="col-8 col-md-5 col-lg-6 col-xl-5">
                  <form action="" [formGroup]="profileForm">
@@ -50,28 +53,24 @@
                
                   <input type="text" name="" id="" style="padding:10px ; width:20rem" placeholder="Add Bio" formControlName="bio">
                   <div ng-app="testApp" ng-controller="testController">
-                    <div class="well">
-                    
-                            Change Profile Pic
-                            
-                        
-                            <input type="file"  accept="image/*" ng-model="imageSrc" onchange="angular.element(this).scope().fileNameChaged(this)" style="font-size:15px">
-                       
-                       
+                    <div class="well">Change Profile Pic
+                      <input type="file"  accept="image/*" ng-model="imageSrc" onchange="angular.element(this).scope().fileNameChaged(this)" style="font-size:15px">      
                     </div>
                 </div>
              
-                <!-- <button (click)="saveProfile()" class="btn btn-primary">Save Updates</button> -->
-                <button class="btn  btn-orange btn-lg px-3 mt-2" type="submit"  >Save Profile</button>
+                 <button (click)="saveProfile()" class="btn btn-primary">Save Updates</button> -->
+                <!-- <button class="btn  btn-orange btn-lg px-3 mt-2" type="submit"  >Save Profile</button>
               </form>
-         
-            
+          -->
+<!--             
      </div>
      </div>
-    </div>
+    </div> --> 
               </div>
 
-
+<br>
+<br>
+<br>
               <div class="container">
                 <div class="row">
             
@@ -174,6 +173,6 @@
 </div>
 
 </div>
- </div>
+ <!-- </div> -->
 
   </body> 
