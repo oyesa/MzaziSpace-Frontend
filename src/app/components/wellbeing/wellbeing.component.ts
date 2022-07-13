@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, Output, EventEmitter } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { PostService } from 'src/app/services/post.service';
-import { Post } from "src/app/post";
+import { groups } from 'src/app/classes/groups';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GroupsService } from 'src/app/services/groups.service';
 
 @Component({
   selector: 'app-wellbeing',
@@ -9,11 +10,25 @@ import { Post } from "src/app/post";
   styleUrls: ['./wellbeing.component.css']
 })
 export class WellbeingComponent {
-  
   closeResult: string = '';
-  
-  constructor(private modalService: NgbModal, private postService: PostService ) {}
+  post: any;
+  selectedImage!:File|any;
+  @Output() newPost: EventEmitter<groups> = new EventEmitter();
+  constructor(private modalService: NgbModal) {}
+  ngOnInit(): void {
     
+  }
+  
+  uploadFile(event: any): void {
+    this.selectedImage = event.target.files[0];
+  }
+  addPost(): void {
+    const fd = new FormData();
+    fd.append('image', this.selectedImage, this.selectedImage.name);
+    fd.append('post', this.post);
+     
+  }
+
   open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -21,7 +36,6 @@ export class WellbeingComponent {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
-  
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
@@ -31,7 +45,5 @@ export class WellbeingComponent {
       return  `with: ${reason}`;
     }
   }
-  onSubmit(text: string) {
-    
+  
   }
-}

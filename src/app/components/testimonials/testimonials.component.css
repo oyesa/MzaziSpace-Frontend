@@ -1,82 +1,91 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  font-family:"Rokkitt', serif";
-  background: #000;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: whitesmoke;
+  padding: 20px;
 }
-
-.testimonials {
-  overflow: hidden;
-  position: relative;
-  max-height: 300px;
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
-
-.testimonials {
-  background: #000;
+.articles-list {
+  display: flex;
+  justify-content: space-between;
 }
-
-.one-slide,
-.testimonial,
-.message {
-  border: none !important;
-  outline: none !important;
-  color: #FFFF;
+.articles-items {
+  width: calc(25% - 15px);
 }
-
-.icon-overlay {
-  position: absolute;
-  opacity: 0.3;
-  right: 10%;
-  top: 0;
-  height: auto;
-  width: 100%;
-  max-width: 400px;
+.articles-items img {
+  max-width: 100%;
+  height: 190px;
+  object-fit: cover;
 }
-
-.carousel-controls .control {
-  position: absolute;
-  transform: translateY(-50%);
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  z-index: 1;
+.articles-content {
+  margin-top: 12px;
 }
-
-.prev {
-  left: -2.25rem;
+.articles-content p {
+  line-height: 1.4;
+  padding: 15px 0;
+}
+.articles-content .btn {
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
   
+  color: #000;
+  cursor: pointer;
+  font-size: 16.8px;
+  transition: all 0.2s ease-in;
 }
-
-.next {
-  right: -2.25rem;
+.articles-content .btn:hover {
+  background-color: #15def8;
 }
-
-@media screen and (max-width: 768px) {
-  .testimonials {
-    max-height: 700px;
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal-content {
+  max-width: 550px;
+  height: 420px;
+  padding: 20px;
+  line-height: 1.5;
+  background-color: #fff;
+  border-radius: 14px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16rem);
   }
-  .icon-overlay {
-    height: 300px;
-    top: calc(50% - 150px);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .carousel-controls .control {
-    width: 25px;
-    height: 25px;
-    top: inherit;
-  }
-  .prev {
-    left: 0;
-  }
-  .next {
-    right: 0;
-  }
-  .control i {
-    font-size: .7rem;
-  }
-  .testimonials .message {
-    font-size: 1rem;
-  }
-  .testimonials h2 {
-    font-size: 1.5rem;
-  }
+}
+.modal-close {
+  position: absolute;
+  top: 5rem;
+  left: 8rem;
+  max-width: 68px;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.modal-close:hover {
+  color: #11a5b9;
 }
