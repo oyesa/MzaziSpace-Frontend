@@ -25,11 +25,8 @@ import { SinglefathersComponent } from './components/singlefathers/singlefathers
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
-<<<<<<< HEAD
 import { CommentsComponent } from './components/comments/comments.component';
-=======
-import { PostsComponent } from './components/posts/posts.component';
->>>>>>> development
+// import { PostsComponent } from './components/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
