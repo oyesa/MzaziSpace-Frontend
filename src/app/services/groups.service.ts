@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import {Groups } from 'src/app/classes/groups';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable, map } from 'rxjs';
+import { groups } from '../classes/groups';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +9,19 @@ import {Groups } from 'src/app/classes/groups';
 export class GroupsService {
   api_link: string = "https://mzazispace.herokuapp.com/"
 
+  headers = new HttpHeaders(
+    {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Headers': 'Content-TYpe',
+      'Authorization': 'Bearer' + JSON.parse(localStorage.getItem('token'))
+    }
+  )
+
+  requestOptions = {headers: this.headers}
   constructor(private http: HttpClient) { }
 
-  Groups():Observable<Groups[]>{
-    return this.http.get<Groups[]>(this.api_link + `request/  groups/`)
+  Groups():Observable<any[]>{
+    return this.http.get<groups[]>(this.api_link + `request/api/group/`).pipe(map(response=>response))
   }
 }

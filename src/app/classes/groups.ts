@@ -1,6 +1,5 @@
-export class Groups{
-    story :string
-    post_date :string
-    image : any
+export class groups{
+    image:any
+    description :string
         
 }
