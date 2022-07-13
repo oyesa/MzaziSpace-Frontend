@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from 'src/app/services/services.service';
-import { Profile } from 'src/app/classes/profile';
+import { Profile } from 'src/app/classes/profile';  
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -17,7 +17,7 @@ export class UpdateProfileComponent implements OnInit {
     private formBuilder:FormBuilder) { }
 
 ngOnInit(): void {
-this.Profile()
+// this.Profile()
 
 //buid edit form
 this.profileEditForm=this.formBuilder.group({
@@ -29,13 +29,13 @@ this.profileEditForm=this.formBuilder.group({
 })
 
 }
-Profile():void{
-// console.log(this.ServicesService.Profile().subscribe(Profile))
-this.ServicesService.Profile().subscribe(profile=>{
-this.profile=profile
-console.log(profile)
-})
-}
+// Profile():void{
+// // console.log(this.ServicesService.Profile().subscribe(Profile))
+// this.ServicesService.Profile().subscribe(profile=>{
+// this.profile=profile
+// console.log(profile)
+// })
+// }
 
 
 updateProfile():void{

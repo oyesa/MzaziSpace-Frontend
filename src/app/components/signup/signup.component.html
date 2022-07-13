@@ -6,9 +6,7 @@
       <div class="card text-black" style="border-radius: 2rem">
         <div class="card-body text-center">
           <form action="#" class="login-form" [formGroup]="formGroup" (ngSubmit)="signupProcess()">
-          
             <h2 class="fw-bold mb-2 text-uppercase" id="title">Sign Up</h2>
-
             <div class="form-outline form-white mb-4">
               <label class="form-label" for="typefisrtName">First Name</label>
               <input type="text" id="typefisrtName" class="form-control" formControlName="f_name" required />
@@ -21,12 +19,10 @@
               <label class="form-label" for="typeuserName">Username</label>
               <input type="text" id="typeuserName" class="form-control" formControlName="username" required/>
             </div>
-
             <div class="form-outline form-white mb-4">
               <label class="form-label" for="typeEmailX">Email</label>
               <input type="email" id="typeEmailX" class="form-control" formControlName="email" required/>
             </div>
-
             <div class="form-outline form-white mb-4">
               <label class="form-label" for="typePasswordX">Password</label>
               <input type="password"id="typePasswordX"class="form-control" formControlName="password" required/>
@@ -42,11 +38,8 @@
               </select>
               <!-- <input type="text" id="typeName" class="form-control" formControlName="user_role" /> -->
             </div>
-            
-
-            <button class="btn btn-outline-dark btn-lg px-5" type="submit" mat-button (click)="openSnackBar('Signed In Successfully', 'Welcome')" >Sign Up</button>
+            <button class="btn btn-outline-dark btn-lg px-5" type="submit"  >Sign Up</button>
           </form>
-
           <div>
             <p class="mb-0" id="title">
               Already have an account?
@@ -58,4 +51,15 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
 

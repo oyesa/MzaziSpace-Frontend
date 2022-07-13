@@ -8,7 +8,9 @@ font-family: 'Yeseva One', cursive; */
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  background-image: url("/assets/about77.png");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Float four columns side by side */
@@ -46,11 +48,20 @@ body {
   color: #000;
 }
 
-h1, h2{
+h1{
   font-family: 'Yeseva One', cursive;
   text-align: center;
   color: #F4B504;
-  margin-top: 1%;
+  margin-top: 7%;
+  margin-bottom: 17px;
+  font-size: 44px;
+}
+
+h2{
+  font-family: 'Yeseva One', cursive;
+  text-align: center;
+  color: #F4B504;
+  /* margin-top: 1%; */
   margin-bottom: 17px;
   font-size: 44px;
 }
@@ -68,6 +79,3 @@ p{
   margin-bottom: 15%;
 }
 
-/* .container-couns{
-  margin-top: 5%;
-} */

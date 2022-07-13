@@ -15,11 +15,11 @@ body{
 
 
 .container{
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 60vh;
-  margin-bottom: 10%;
-  padding-bottom: 60%;
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  height: 80vh;
+  margin-bottom: 10% !important;
+  /* padding-bottom: 60%; */
   border-radius: 3%;
 }
 
@@ -103,7 +103,11 @@ p{
 i {
   background-color: #D3D3D3;
   border-radius: 50%;
-  /* border: 1px solid grey; */
   padding: 10px;
   color: #000;
 }
+
+.card-body{
+  margin-bottom: 5%;
+}
+

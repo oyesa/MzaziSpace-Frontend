@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthServiceService } from 'src/app/auth-service.service';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
+// import { AuthService } from 'src/app/services/auth.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
@@ -56,34 +57,13 @@ export class SignupComponent implements OnInit {
       this.authService.signup(loginCredentials).subscribe(result =>{
         console.log('Here we are',result)
         this.router.navigate(['/login']);
-        // if(result.email){
-        //   console.log(result);
-        //   alert("Registered successfully");
-        // }else{
-        //   alert('Holla!!You have been signed up to Mzazi Space')
-        // }
 
       });
     }
   }
 
 
-//   submit(username: string, email: string, password: string,f_name: string,l_name:string,user_role:string): void {
-//     console.log(username, email, password,f_name,l_name,user_role)
-//     this.http.post('http://localhost:8000/auth/register/', {
-//         username: username,
-//         email: email,
-//         password: password,
-//         f_name:f_name,
-//         l_name:l_name,
-//         user_role:user_role
-//       })
-//       .subscribe((res) => {
-//         this.response = res;
-//         this.message = this.response.message;
-//         this.router.navigate(['/login']);
-//       });
-//   }
+
 
   
 }

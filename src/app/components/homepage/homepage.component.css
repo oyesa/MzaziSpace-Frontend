@@ -1,5 +1,7 @@
 * {
   text-decoration: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .homepage {
   background: radial-gradient(ellipse, transparent -60%, rgba(0, 0, 0, 0.8)),
@@ -17,7 +19,7 @@
   font-weight: bolder;
 }
 .content {
-  height: 70vh;
+  height: 75vh;
 }
 
 h1, h2{
@@ -68,7 +70,7 @@ position: relative;
 }
 
 .mydiv i {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 0.6rem;
   color: #f4b504;
 }
@@ -111,35 +113,7 @@ position: relative;
   background: transparent;
 }
 
-.popular-card-content h4 {
-  padding: 0.5rem 0;
-  font-weight: bold;
-}
-.popular-card-content p {
-  color: #888888;
-}
-.popular-user-name p {
-  color: #888888;
-}
-.popular-content i {
-  font-size: 0.8rem;
-}
-.featured-content {
-  padding: 1rem;
-}
-.featured-content .featured-text h3 {
-  color: #fa4269;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-}
-.featured-content .featured-text .inner-div {
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-}
-.featured-content .featured-text .inner-div h2 {
-  flex-basis: 60%;
-  font-weight: bold;
-}
+
 @media (max-width: 948px) {
   .text h1 {
     font-size: 3rem;
@@ -166,9 +140,9 @@ position: relative;
     }
 
     .person-img {
-        height: 250px;
+        height: 240px;
         position: relative; 
-        width: 250px; 
+        width: 240px; 
         overflow: hidden; 
         border-radius: 50%;
         border: 2px solid #f4b504;
@@ -184,7 +158,7 @@ position: relative;
 .person1, .person2, .person3{
   border: 0px solid #f4b504;
 
-  padding: 30px;
+  padding: 35px;
   background-color: white;
 }
 

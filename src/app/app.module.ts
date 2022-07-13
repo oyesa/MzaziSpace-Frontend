@@ -27,6 +27,7 @@ import { SinglefathersComponent } from './components/singlefathers/singlefathers
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+import { PostsComponent } from './components/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -56,7 +57,9 @@ const appRoutes: Routes = [
     SinglefathersComponent,
     SpecialComponent,
     WellbeingComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    PostsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     NgbModule,
     NgbDropdownModule,
