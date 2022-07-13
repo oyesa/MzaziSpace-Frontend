@@ -32,7 +32,9 @@ import { LandingComponent } from './components/landing/landing.component';
 
 
 
-const appRoutes: Routes = []
+const appRoutes: Routes = [
+  
+]
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ const appRoutes: Routes = []
     CommentsComponent,
     PostsComponent,
     LandingComponent
+    
     
   ],
   imports: [
