@@ -1,141 +1,118 @@
-<br>
-<br>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Mzazi Space</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@100&family=Yeseva+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Rokkitt:wght@100&family=Yeseva+One&display=swap" rel="stylesheet">
-
-  </head>
-  <body>
-
-    <div class="container">
-      <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-                  <!-- Pills navs -->
-
-<!-- Pills navs -->
-
-<!-- Pills content -->
-<div class="tab-content bg-dark border border-warning" style="border: 10px; border-radius: 15px">
-  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-    <form class="login-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
-      <div class="text-center mb-3">
-        <!-- <h1 class="text-warning font-weight-bold">Hi !</h1> -->
-        <img  class="bg-white rounded mt-3" src="data:image/jpeg;base64,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" alt="">
-        <h6 class="text-warning">Welcome to Mzazi Space Login or Register to Continue</h6>
-
-      </div>
-
-
-
-      <!-- Email input -->
-      <div class="form-outline mb-4">
-        <input type="email" id="loginName" class="form-control" placeholder="Email" formControlName="email" />
-        <label class="form-label" for="loginName"></label>
-      </div>
-
-      <!-- Password input -->
-      <div class="form-outline mb-4">
-        <input type="password" id="loginPassword" class="form-control" placeholder="Password" formControlName="password"/>
-        <label class="form-label" for="loginPassword"></label>
-      </div>
-
-      <!-- 2 column grid layout -->
-      <div class="row mb-4">
-        <div class="col-md-6 d-flex justify-content-center">
-          <!-- Checkbox -->
-        </div>
-
-      </div>
-      <div id="mtoto">
-
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-warning mb-md-5 mt-md-4 pb-2">LOGIN</button>
-
-    </div>
-
-      <!-- Register buttons -->
-      <div class="text-center">
-
-      </div>
-    </form>
-    <div id="mzazi">
-    <a class="text-warning" routerLink="/signup">Not a member? Register</a>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="container">
+<div class="forms-container">
+<div class="signin-signup">
+<form action="#" class="sign-in-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+<h2 class="login-form" style="font-family: 'Yeseva One', cursive;">Login</h2>
+<div class="input-field">
+  <i class="fa fa-user"></i>
+  <input type="Email" placeholder="Email" formControlName="email"/>
   </div>
-  </div>
+<div class="input-field">
+<i class="fa fa-lock"></i>
+<input type="password" placeholder="Password" formControlName="password"/>
 </div>
-<!-- Pills content -->
-          </div>
+<input type="submit" value="Login" class="btn solid"/>
+<p class="social-text">Our social platforms</p>
+<div class="social-media">
+<a href="#" class="social-icon">
+<i class="fa fa-facebook-f"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-google"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-linkedin"></i>
+</a>
+</div>
+</form>
+<form action="#" class="sign-up-form">
+<h2 class="title">Sign up</h2>
+<div class="input-field">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="First Name" />
+</div>
+<div class="input-field">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Last Name" />
+</div>
+<div class="input-field">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Username" />
+</div>
+<div class="input-field">
+<i class="fa fa-envelope"></i>
+<input type="email" placeholder="Email" />
+</div>
+<div class="input-field">
+<i class="fa fa-lock"></i>
+<input type="password" placeholder="Password" />
+</div>
+<label class="form-label" for="typeName" style="font-family: 'Montserrat', sans-serif; font-weight: 500; ">UserRole:</label>
+<div class="form-outline">
+<select name="demo" id="typeName" class="form-control" formControlName="user_role" placeholder="Select" required>
+<option style="text-align: center; font-family: 'Montserrat', sans-serif;">Select Option</option>
+<option formControlName="user_role" style="text-align: center; font-family: 'Montserrat', sans-serif;">Single Parent</option>
+<option formControlName="user_role" style="text-align: center; font-family: 'Montserrat', sans-serif;">Counsellor</option>
+</select>
+</div>
+<input type="submit" class="btn" value="Sign up" />
+<p class="social-text">Our social platforms</p>
+<div class="social-media">
+<a href="#" class="social-icon">
+<i class="fa fa-facebook-f"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-google"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-linkedin"></i>
+</a>
+</div>
+</form>
+</div>
+</div>
 
-          <div class="col-md-4"></div>
+<div class="panels-container">
+<div class="panel left-panel">
+<div class="content">
+<h3 style="font-family: 'Yeseva One', cursive; letter-spacing: 2px;">New in Mzazi Space?</h3>
+<p>
+Join the best hub for single parents!
+</p>
+<button class="btn transparent" id="signUpBtn" style="font-family: 'Yeseva One', cursive; color: #000;" routerLink="/signup">
+Sign up
+</button>
+</div>
+<img src="/assets/signup.png" class="image" alt="" />
+</div>
+<div class="panel right-panel">
+<div class="content">
+<h3 style="font-family: 'Yeseva One', cursive;">One of us ?</h3>
+<p>
+Join the best hub for single parents!
+</p>
+<button class="btn transparent" id="signInBtn">
+Sign in
+</button>
+</div>
+<img src="/assets/signup.png" class="image" alt="" />
+</div>
+</div>
+</div>
 
-      </div>
-  </div>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+<!-- <script src="app.js"></script> -->
+</body>
 </html>
-
-<style>
-    img{
-        width: 15vw;
-    }
-    h1{
-      font-family: 'Montserrat', sans-serif;
-
-
-    }
-    h6{
-      font-family: 'Yeseva One', cursive;
-      margin-top: 10%;
-      line-height: 2;
-      font-size: large;
-    }
-
-    a{
-      font-family: 'Yeseva One', cursive;
-
-    }
-
-    button{
-      font-family: 'Yeseva One', cursive;
-    }
-
-    input{
-      border: 10px solid yellow;
-      font-family: 'Yeseva One', cursive;
-      width: 20vw;
-
-    }
-
-    #mzazi{
-      margin-left: 20%;
-    }
-
-    #mtoto{
-      margin-left: 38%;
-    }
-</style>
-
-
-
-
