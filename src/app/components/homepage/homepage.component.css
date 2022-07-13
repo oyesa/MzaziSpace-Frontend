@@ -13,11 +13,23 @@
 }
 
 .text h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bolder;
 }
 .content {
   height: 70vh;
+}
+
+h1, h2{
+  font-family: 'Yeseva One', cursive;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn{
+  font-family: 'Montserrat', sans-serif;
 }
 /* .content {
   display: flex;

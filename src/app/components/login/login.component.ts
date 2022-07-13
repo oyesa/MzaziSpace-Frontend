@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/auth-service.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { SnackBarService } from 'src/app/snack-bar.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,12 +13,16 @@ export class LoginComponent implements OnInit {
   formGroup: FormGroup;
   // router: any;
 
-  constructor(public snackBar: MatSnackBar,private authService: AuthServiceService, private router: Router) { }
-  openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action, {
-       duration: 5000,
-    });
- } 
+  constructor(private snackBService:SnackBarService, public snackBar: MatSnackBar,private authService: AuthServiceService, private router: Router) { }
+//   openSnackBar(message: string, action: string) {
+//     this.snackBar.open(message, action, {
+//        duration: 5000,
+//     });
+//  }
+ trigger(message:string, action:string)
+ {
+  this.snackBService.openSnackBar(message, action);
+ }
   ngOnInit(): void { 
     this.initForm();
   }
@@ -50,6 +55,7 @@ export class LoginComponent implements OnInit {
     
       this.authService.login(loginCredentials).subscribe(result =>{
         console.log(result)
+        // localStorage.setItem('token', response.token)
         this.router.navigate(['/home']);
         // if(result.success){
           // console.log(result);

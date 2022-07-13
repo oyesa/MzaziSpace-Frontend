@@ -50,8 +50,11 @@
         </div>
   
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4" 
-        mat-button (click)="openSnackBar('Logged In Successfully', 'Welcome')">LOGIN</button>
+        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="trigger('Logged in Successfully', 'Welcome')">LOGIN</button>
+
+        <!-- <div class="alert alert-success" role="alert">
+          Logged in successfully
+        </div> -->
   
         <!-- Register buttons -->
         <div class="text-center">
@@ -64,24 +67,11 @@
   <!-- Pills content -->
             </div>
 
-            <div class="col-md-4"></div>
         
         </div>
     </div>
 
-<!-- <style>
-    img{
-        width: 10vw;
-    }
-    h1{
-      font-family: 'Montserrat', sans-serif;
 
-    }
-    h6{
-      font-family: 'Yeseva One', cursive;
-
-    }
-</style> -->
 
 
 

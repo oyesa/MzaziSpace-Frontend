@@ -2,12 +2,10 @@
     background:  rgba(231, 233, 240, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    position: absolute;
-    width: 198px;
+    width: 140px;
     height: 50px;
-    left: 760px;
     color: black;
-    font-family: 'Rokkitt', serif;
+    font-family: 'Montserrat', sans-serif;
     font-family: 'Yeseva One', cursive;
     margin-top: 3px;
 }
@@ -15,31 +13,32 @@
     font-family: 'Yeseva One', cursive;
     color: #f4b504;
     font-weight: 300px;
-    font-size: 121px;
-    padding-top: 380px;
+    font-size: 5.8rem;
+    padding-top: 23%;
+    letter-spacing: 5px;
     /* line-height: 300px; */
     text-align: center;
+    padding-bottom: 2%;
     /* margin-top: 20px; */
     /* padding-bottom: 30%; */
 }
 #caption2{
-    font-family: 'Rokkitt', serif;
+    font-family: 'Montserrat', sans-serif;
     font-family: 'Yeseva One', cursive;
-    color: #f4b504;
-    font-size: 45px;
+    color: #fff;
+    font-size: 43px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 #nav{
-    font-family: 'Rokkitt', serif;
+    font-family: 'Montserrat', sans-serif;
     font-family: 'Yeseva One', cursive;
 } 
 #denis{
-    /* background-image: url('https://images.pexels.com/photos/1149363/pexels-photo-1149363.jpeg?auto=compress&cs=tinysrgb&w=600'); */
     background-image: url('/assets/andrae-ricketts-Q9_zv0LN4jU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    /* padding-bottom: 30%; */
-
-    /* margin-bottom: 1%; */
+    /* opacity: 0.8; */
 }

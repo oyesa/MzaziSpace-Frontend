@@ -13,7 +13,7 @@ export class AuthServiceService {
   constructor(private http: HttpClient) {}
   login(data):Observable<any>{
     // console.log('mzazi space')
-    return this.http.post('https://mzazispace.herokuapp.com/auth/login/',data);
+    return this.http.post('http://127.0.0.1:8000/auth/login/',data);
   }
   signup(data):Observable<any>{
     // console.log('mzazi space')
