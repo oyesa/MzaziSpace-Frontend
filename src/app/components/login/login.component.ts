@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthServiceService } from 'src/app/auth-service.service';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { Router } from '@angular/router';
+// import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthServiceService, private router: Router) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.initForm();
   }
   initForm(){
@@ -22,17 +23,6 @@ export class LoginComponent implements OnInit {
       password: new FormControl('',[Validators.required])
     });
   }
-  // loginUser = () => {
-  //   if (this.form.valid) {
-  //       this.isLoading = true;
-  //       const loginCredentials: IAuthBody = {
-  //           email: this.form.controls.email.value,
-  //           password: this.form.controls.password.value
-  //       };
-  //       this.authService.authenticateUserWithServer(loginCredentials).subscribe(
-  //           res => {
-  //               this.isLoading = false;
-  //               this.snackBar.showSuccessSnackBar(this.successMessage);
 
   loginProcess(){
     if(this.formGroup.valid){
@@ -42,28 +32,12 @@ export class LoginComponent implements OnInit {
         password: this.formGroup.controls['password'].value
         }
     };
-    
-      this.authService.login(loginCredentials).subscribe(result =>{
-        console.log(result)
-        this.router.navigate(['/home']);
-        // if(result.success){
-          // console.log(result);
-        //   alert('Logged in successfully');
-        // }else{
-        //   alert('Ooops')
-        // }
-        // this.router.navigate(['/home']);
-        // console.log(result)
-        // if(result.password){
-          // console.log(result);
-        //   alert('Logged in successfully');
-        // }else{
-        //   alert('Ooops')
-        //   console.log(result)
-        // }
 
+      this.authService.login(loginCredentials).subscribe(result =>{
+        const token = result["CustomUser"]["token"]
+        localStorage.setItem("token",JSON.stringify(token) )
+        this.router.navigate(['/home']);
       });
     }
   }
-
 }

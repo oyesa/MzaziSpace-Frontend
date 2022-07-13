@@ -1,86 +1,155 @@
 <body>
-    <div class="container">
-        <!--user profile here-->
-       <div class="userdetails " style="background-image: url('https://media.istockphoto.com/photos/fog-in-black-smoke-and-mist-on-wooden-table-halloween-backdrop-picture-id1341515382?k=20&m=1341515382&s=612x612&w=0&h=bDVy91iNDAQoENWYW8C41bsYarjrYyUWIHT3dOcVpn8='); width:1254px;height:438px; background-size: cover; background-repeat:no-repeat;">
-        <!--lOOP for profile starts here-->
-        <div class="row" *ngFor="let profile of profile" >
-            <div class="card-columns" style="margin-top:19%; margin-left:10%">
-                <div class="card">
-                    <div class="col-lg-5 col-md-5 col-sm-12">
-                        <div class="text-center mt-3" >
-                            <img  class="rounded-circle profile-img" src="{{prof_pic_url + profile.prof_pic}}" alt="profile-image" width="60%">
-                            <h3 class="mt-4 h-font-semibold" >{{profile.user}}</h3>
-                            <p class="p-description"></p>
+  <div class="container mt-5">
+      <!--user profile here-->
+     <div class="userdetails " style="background-image: url('https://static4.depositphotos.com/1003671/324/i/600/depositphotos_3248385-stock-photo-african-sunset-with-silhouetted-tree.jpg'); width:1254px;height:438px; background-size: cover; background-repeat:no-repeat; border-radius:10px; opacity:0.8rem">
+                      <div class=" " >
+                     
+                        <img class="rounded-circle profile-img" src="https://media.istockphoto.com/illustrations/stylish-avatar-in-black-in-a-yellow-circle-profile-template-for-illustration-id1311497219?k=20&m=1311497219&s=170667a&w=0&h=l_JLCykf3bHxG-HzTDDRnVNBGmkpVz4iH9v5Gdqcuco=" alt="profile-image" width="10%" style="margin-top:29% ; margin-left: 10%;" >
+                        <!-- <img [src]="profile.prof_pic" class="user-img" /> -->
+                        <!-- <img  class="rounded-circle profile-img" src="{{prof_pic_url + profile.prof_pic}}" alt="profile-image" width="60%"> -->
+                          <div class="bio" style="margin-left:10%">
+                          <h3 class="mt-4 h-font-semibold" >{{profile?.user?.f_name}} {{profile?.user?.l_name}}</h3>
+                          <p class="p-description">{{profile?.user?.email}}</p>
+                      </div>
+                    </div>
+                    
+                 
+
+                
+                  
+
+              </div>
+    <div class="container-fluid">
+                
+ 
+              <div class="col-lg-8 col-md-5 col-sm-12 mt-3 text-center">
+                <h4 class="h-font-semibold">BIO</h4>
+                <p class="p-description">{{profile.bio}}</p>
+                <!-- <p class="p-description">I love Data</p> -->
+                <a (click)="updateProfile(profile)" ><button class="btn  btn-orange">Update Profile</button></a>
+            </div>
+              <div class="container" style="margin-top:-8%; margin-left:30%">
+               <div class="row d-flex justify-content-center align-items-center">
+                 <div class="col-8 col-md-5 col-lg-6 col-xl-5">
+                 <form action="" [formGroup]="profileForm">
+                           
+               
+                  <input type="text" name="" id="" style="padding:10px ; width:20rem" placeholder="Add Bio" formControlName="bio">
+                  <div ng-app="testApp" ng-controller="testController">
+                    <div class="well">
+                        
+                            <input type="file" accept="image/*" ng-model="imageSrc" onchange="angular.element(this).scope().fileNameChaged(this)" style="font-size:15px">
+                          
+                       
+                    </div>
+                </div>
+             
+           
+                <button class="btn  btn-orange btn-lg px-3 mt-2" type="submit"  >Save Profile</button>
+              </form>
+         
+            
+     </div>
+     </div>
+    </div>
+              </div>
+
+
+              <div class="container">
+                <div class="row">
+            
+                  <div class="col-xs-12 col-md-10 offset-md-1">
+                    <div class="articles-toggle">
+                      <div class="col-lg-12 col-md-4 col-sm-12 mt-4">
+                        <div class="userposts" style="display: inline-block; ">
+                        <h5 class="post-name">My Posts </h5>
+                        <div class="card-columns" >
+                        <div class="card" style="width:100%;">
+                            <img src="https://forwardtimes.com/wp-content/uploads/2016/03/single-black-mother-large.jpg" alt="postscreenshot" width="100%">
+                            <div class="card-body">
+                                <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Winning As a Single Mom</h5>
+                                <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width:100%;">
+                            <img src="../../../assets/helena-lopes-PGnqT0rXWLs-unsplash.jpg" alt="postscreenshot" width="100%">
+                            <div class="card-body">
+                                <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Community that Changed my life</h5>
+                                <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width:100%;">
+                            <img src="../../../assets/landingpg-removebg-preview.png" alt="postscreenshot" width="100%">
+                            <div class="card-body">
+                                <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Winning As a Single Mom</h5>
+                                <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-1 col-md-1 col-sm-0"></div>
-                    <div class="col-lg-5 col-md-5 col-sm-12 mt-3">
-                        <h4 class="h-font-semibold">BIO</h4>
-                        <p class="p-description">{{profile.bio}}</p>
-                        <a href="" routerLink="/update-profile" ><button class="btn  btn-orange">Update Profile</button></a>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-0"></div>
+            
+                  </div>
+            
+                </div>
+              </div>
+            
+            </div>
+
+   <!-- <div class="userposts" style="margin-top:1%">
+    <div class="row">  -->
+        <!--loop card start-->
+        <!-- <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
+        <div class="cards">
+            <div class="card"> -->
+            
+
+            <!-- </div> -->
+        <!-- </div>
+    </div>  -->
+     
+        <!--place holders start (delete them)-->
+
+        <!-- <div class="col-lg-12 col-md-4 col-sm-12 mt-4">
+            <div class="userposts" style="display: inline-block; ">
+            <h5 class="post-name">My Posts </h5>
+            <div class="card-columns" >
+            <div class="card" style="width:100%;">
+                <img src="https://forwardtimes.com/wp-content/uploads/2016/03/single-black-mother-large.jpg" alt="postscreenshot" width="100%">
+                <div class="card-body">
+                    <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Winning As a Single Mom</h5>
+                    <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
                 </div>
             </div>
+            <div class="card" style="width:100%;">
+                <img src="../../../assets/helena-lopes-PGnqT0rXWLs-unsplash.jpg" alt="postscreenshot" width="100%">
+                <div class="card-body">
+                    <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Community that Changed my life</h5>
+                    <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
+                </div>
+            </div>
+            <div class="card" style="width:100%;">
+                <img src="../../../assets/landingpg-removebg-preview.png" alt="postscreenshot" width="100%">
+                <div class="card-body">
+                    <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Winning As a Single Mom</h5>
+                    <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
+                </div>
+            </div>
+            -->
+            
+<!--           
         </div>
-        <!--Loop ends here-->
-    </div>
+    </div>  -->
+        <!--place holders end (delete them)-->
+    <!-- </div> 
+ </div> -->
+
+  
+             
+
+
+
 </div>
-<!-- <div class="card text-dark" style="width: 20%;background-color:#f4b504;margin-left: 10%;">
-    <div class="card-body text-center">
-        <a href="http://"><i class="fa fa-twitter p-1" style="font-size:1.3rem; color:black;"  aria-hidden="true">Tweeter</i></a>
 
-    </div>
-</div> -->
-<!-- <div class="card text-dark" style="width: 20%; margin-top:2% ;background-color:#f4b504;margin-left: 10%; ">
-    <div class="card-body text-center">
-        <a href=""><i class="fa fa-envelope " style="font-size:1.3rem; color:black; " aria-hidden="true">Send a Message</i></a>
-    </div>
-</div>  -->
-   
-    <!-- User posts here-->
- <div class="userposts" style="display: inline-block; margin-left:49%">
-    <h2>My Posts</h2>
-    <div class="card-columns" > 
-     <!--loop card start-->
-   
-     <div class="card" style="width:100%;">
-        <img src="https://forwardtimes.com/wp-content/uploads/2016/03/single-black-mother-large.jpg" alt="postscreenshot" width="100%">
-        <div class="card-body">
-            <h5 class="text-center post-name " style="color:rgb(3, 3, 3) ; font-weight:700;">Winning As a Single Mom</h5>
-            <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
-        </div>
-    </div> 
-          <!--place holders start (delete them)-->
-    <div class="card" style="width:100%;">
-        <img src="https://forwardtimes.com/wp-content/uploads/2016/03/single-black-mother-large.jpg" alt="postscreenshot" width="100%">
-        <div class="card-body">
-            <h5 class="text-center post-name " style="color:rgb(6, 6, 6) ; font-weight:700;">Winning As a Single Mom</h5>
-            <p class="text-center">The Single Mother Survival Guide Podcast includes a mixture of me babbling about single mums </p>
-        </div>
-    </div> 
-    
-    
-   </div> 
-      <!--place holders end (delete them)-->
- 
-         </div>  
- 
-    
-      
-    </body>
+</div>
+ </div>
 
-
-    
-
-
-
-
-   
-        
-        
-        
-        
-        
-           
-          
+  </body> 

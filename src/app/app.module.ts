@@ -70,6 +70,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     NgbModule,
     NgbDropdownModule,
+    BrowserAnimationsModule,
+    // MatSnackBarModule,
   
   ],
   providers: [],
