@@ -10,10 +10,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  inboundClick = true;
+  outboundClick = true;
   profile: any
   profileForm: FormGroup
+  token = this.authService.decodeToken(JSON.parse(localStorage.getItem('token')))
 
-  constructor(private authService:AuthServiceService, private fb: FormBuilder) { }
+  constructor( private authService:AuthServiceService, private fb: FormBuilder) { }
 
 
   ngOnInit(): void {
@@ -26,23 +29,22 @@ export class ProfileComponent implements OnInit {
  
 
    getUserProfile(){
-    this.authService.getUserProfile('Clouds').subscribe(response => {
+
+    this.authService.getUserProfile(this.token["user_data"]["username"]).subscribe(response => {
+      
       this.profile = response['profile']
-      console.log(this.profile)
+      console.log(response)
     }, err =>{
       console.log(err)
     })
    }
    updateProfile(user){
+
     this.profileForm.patchValue({
       bio: user.bio
-
     })
 
-   
-
-    
-
    }
+
    
 }
