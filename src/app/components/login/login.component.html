@@ -8,17 +8,17 @@
 <div class="container">
 <div class="forms-container">
 <div class="signin-signup">
-<form action="#" class="sign-in-form">
-<h2 class="title" style="font-family: 'Yeseva One', cursive;">Sign in</h2>
+<form action="#" class="sign-in-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+<h2 class="login-form" style="font-family: 'Yeseva One', cursive;">Login</h2>
 <div class="input-field">
   <i class="fa fa-user"></i>
-  <input type="Email" placeholder="Email" />
+  <input type="Email" placeholder="Email" formControlName="email"/>
   </div>
 <div class="input-field">
 <i class="fa fa-lock"></i>
-<input type="password" placeholder="Password" />
+<input type="password" placeholder="Password" formControlName="password"/>
 </div>
-<input type="submit" value="Login" class="btn solid" />
+<input type="submit" value="Login" class="btn solid"/>
 <p class="social-text">Our social platforms</p>
 <div class="social-media">
 <a href="#" class="social-icon">
@@ -92,7 +92,7 @@
 <p>
 Join the best hub for single parents!
 </p>
-<button class="btn transparent" id="signUpBtn" style="font-family: 'Yeseva One', cursive; color: #000;">
+<button class="btn transparent" id="signUpBtn" style="font-family: 'Yeseva One', cursive; color: #000;" routerLink="/signup">
 Sign up
 </button>
 </div>

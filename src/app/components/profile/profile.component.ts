@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Profile } from 'src/app/classes/profile'
-import { ServicesService } from 'src/app/services/services.service';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 
@@ -10,36 +10,41 @@ import { ServicesService } from 'src/app/services/services.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profile!:Profile[]
-  // posts!:Posts[]
- 
-  prof_pic_url='http://res.cloudinary.com/dim8pysls/image/upload/v1639001486/x3mgnqmbi73lten4ewzv.png'
-  image_url='https://res.cloudinary.com/'
-  constructor(private ServicesService:ServicesService) { }
-  
-  
+  inboundClick = true;
+  outboundClick = true;
+  profile: any
+  profileForm: FormGroup
+  token = this.authService.decodeToken(JSON.parse(localStorage.getItem('token')))
+
+  constructor( private authService:AuthServiceService, private fb: FormBuilder) { }
+
+
   ngOnInit(): void {
-    this.Profile()
-    // this.Posts()
-   
-    
-  }
-  Profile():void{
-    // console.log(this.ServicesService.Profile().subscribe(Profile))
-    this.ServicesService.Profile().subscribe(profile=>{
-      this.profile=profile
-      console.log(profile)
+    this.getUserProfile()
+    this.profileForm = this.fb.group({
+      bio: [''],
+      prof_pic: ['']
     })
   }
+ 
 
-//   Posts():void{
-//     this.ServicesService.Posts().subscribe(posts=>{
-//       this.posts=posts
-//       for(let item of this.posts){
-//         console.log(this.image_url)
-//       }
-//       // console.log(posts)
-//     })
-  
-// }
+   getUserProfile(){
+
+    this.authService.getUserProfile(this.token["user_data"]["username"]).subscribe(response => {
+      
+      this.profile = response['profile']
+      console.log(response)
+    }, err =>{
+      console.log(err)
+    })
+   }
+   updateProfile(user){
+
+    this.profileForm.patchValue({
+      bio: user.bio
+    })
+
+   }
+
+   
 }
