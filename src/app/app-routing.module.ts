@@ -17,7 +17,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
 import { SpecialComponent } from './components/special/special.component';
-import { PostsComponent } from './components/posts/posts.component';
+import { EventsinfoComponent } from './components/mzazievents/eventsinfo/eventsinfo.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -33,11 +33,11 @@ const routes: Routes = [
   {path: 'community', component: CommunityComponent},
   {path: 'groups', component: GroupsComponent},
   {path: 'mzazievents', component: MzazieventsComponent},
+  {path: 'eventsinfo', component: EventsinfoComponent},
   {path: 'testimonials', component: TestimonialsComponent},
   {path: 'wellbeing', component: WellbeingComponent},
   {path: 'singlefathers', component: SinglefathersComponent},
   {path: 'special', component: SpecialComponent},
-  {path: 'posts', component: PostsComponent}
 ];
 
 @NgModule({

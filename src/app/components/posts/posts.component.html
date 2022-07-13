@@ -45,6 +45,16 @@
         
          
     </ng-template>
-
-
+    <div class="container">
+      <div *ngFor="let post of posts">
+        title:{{post?.title}}<br><br>
+        description:{{post?.description}}<br><br>
+        post_date:{{post?.post_date}}<br><br>
+        image:{{post?.image}}<br><br>
+    
+        
+      </div>
+  
+  
+    </div>
   
