@@ -24,7 +24,7 @@ requestOptions = { headers: this.headers };
     return this.http.post(`${this.url}/auth/login/`,data).pipe(map(responce => responce));
   }
   signup(data):Observable<any>{
-    return this.http.post('http://127.0.0.1:8000/auth/register/',data);
+    return this.http.post(`${this.url}/auth/register/`,data).pipe(map(responce => responce));
   }
     
   getUser(userName): Observable<any>{
