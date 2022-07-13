@@ -26,14 +26,13 @@ requestOptions = { headers: this.headers };
   signup(data):Observable<any>{
     return this.http.post(`${this.url}/auth/register/`,data).pipe(map(responce => responce));
   }
-    
+
   getUser(userName): Observable<any>{
-   
+
     return this.http.get(`${this.url}/auth/user/`).pipe(map(responce => responce));
   }
- 
+
   getUserProfile(userName): Observable<any>{
-    console.log(this.requestOptions)
     return this.http.get(`${this.url}/auth/profile/${userName}/`, this.requestOptions).pipe(map(responce => responce))
   }
   decodeToken(token) {
@@ -42,6 +41,10 @@ requestOptions = { headers: this.headers };
     } catch (e) {
         return null;
     }
+}
+
+updateUserProfile(userName, data): Observable<any>{
+  return this.http.patch(`${this.url}/auth/profile/${userName}/`,data,this.requestOptions).pipe(map(responce => responce))
 }
 }
 
