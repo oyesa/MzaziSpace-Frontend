@@ -4,15 +4,19 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PostService } from 'src/app/services/post.service';
 
+
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  posts: any;
+
   closeResult: string = '';
+  posts: any;
+  
   constructor(private modalService: NgbModal,private pService: PostService) { }
+
   open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -49,16 +53,19 @@ export class PostsComponent implements OnInit {
 
   ngOnInit():void {
     this.AllPost();
+  
 
   }
   AllPost() {
-    this.pService.Post().subscribe(posts =>{
-      this.posts = posts;
+    this.pService.getPost().subscribe (response =>{
+      this.posts = response;
       console.log(this.posts);
+      
     })
-    
+  
+
+  }
  
   }
-}
 
 
