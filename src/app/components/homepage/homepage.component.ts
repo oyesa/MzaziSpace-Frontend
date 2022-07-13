@@ -23,9 +23,7 @@ export class HomepageComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.authService.getUser().subscribe((response:any)=>{
-      console.log(response)
-    })
+ 
   }
 
 }

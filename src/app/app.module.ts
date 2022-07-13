@@ -27,6 +27,7 @@ import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommentsComponent } from './components/comments/comments.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingComponent } from './components/landing/landing.component';
 
 
 
@@ -60,7 +61,7 @@ const appRoutes: Routes = [
     WellbeingComponent,
     UpdateProfileComponent,
     CommentsComponent,
-    
+    LandingComponent
     
   ],
   imports: [
