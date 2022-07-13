@@ -14,6 +14,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 
 export class NavbarComponent implements OnInit {
+  
   authenticated = false;
   message = 'You are not logged in';
   userToken: string
@@ -25,7 +26,7 @@ export class NavbarComponent implements OnInit {
 
 ngOnInit(): void {
   this.userToken = localStorage.getItem('token')
-  this.http.get('http://localhost:8000/auth/user/', {withCredentials: true}).subscribe(
+  this.http.get('https://mzazispace.herokuapp.com/auth/user/', {withCredentials: true}).subscribe(
     (user: any) => {
       this.message = `Hello ${user.username}`;
       Emitters.authEmitter.emit(true);
