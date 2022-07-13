@@ -5,6 +5,7 @@ font-family: 'Yeseva One', cursive; */
 
 * {
   box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 body {
@@ -44,7 +45,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #F4B504;;
+  background-color: #Fff;
   color: #000;
 }
 
@@ -76,6 +77,12 @@ p{
   font-size: 19px;
 }
 
+#i {
+  background-color: #D3D3D3;
+  border-radius: 50%;
+  padding: 10px;
+  color: #000;
+}
 
 #child-div{
   margin-bottom: 27%;
