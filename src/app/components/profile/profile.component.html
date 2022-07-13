@@ -5,6 +5,7 @@
                       <div class=" " >
                      
                         <img class="rounded-circle profile-img" src="https://media.istockphoto.com/illustrations/stylish-avatar-in-black-in-a-yellow-circle-profile-template-for-illustration-id1311497219?k=20&m=1311497219&s=170667a&w=0&h=l_JLCykf3bHxG-HzTDDRnVNBGmkpVz4iH9v5Gdqcuco=" alt="profile-image" width="10%" style="margin-top:29% ; margin-left: 10%;" >
+                       
                         <!-- <img [src]="profile.prof_pic" class="user-img" /> -->
                         <!-- <img  class="rounded-circle profile-img" src="{{prof_pic_url + profile.prof_pic}}" alt="profile-image" width="60%"> -->
                           <div class="bio" style="margin-left:10%">
@@ -22,8 +23,21 @@
     <div class="container-fluid">
                 
  
+        <a type="button" class="more-styles" 
+        [hidden]="!inboundClick" 
+        (click)="inboundClick = !inboundClick" 
+        [routerLink]="['/inbound']" href="">
+     </a>
+     
+     <a type="button" class="more-styles" 
+        [hidden]="!outboundClick " 
+        (click)="outboundClick = !outboundClick " 
+        [routerLink]="['/outbound']" href="">
+     </a>
+
+
               <div class="col-lg-8 col-md-5 col-sm-12 mt-3 text-center">
-                <h4 class="h-font-semibold">BIO</h4>
+                
                 <p class="p-description">{{profile.bio}}</p>
                 <!-- <p class="p-description">I love Data</p> -->
                 <a (click)="updateProfile(profile)" ><button class="btn  btn-orange">Update Profile</button></a>
@@ -37,14 +51,17 @@
                   <input type="text" name="" id="" style="padding:10px ; width:20rem" placeholder="Add Bio" formControlName="bio">
                   <div ng-app="testApp" ng-controller="testController">
                     <div class="well">
+                    
+                            Change Profile Pic
+                            
                         
-                            <input type="file" accept="image/*" ng-model="imageSrc" onchange="angular.element(this).scope().fileNameChaged(this)" style="font-size:15px">
-                          
+                            <input type="file"  accept="image/*" ng-model="imageSrc" onchange="angular.element(this).scope().fileNameChaged(this)" style="font-size:15px">
+                       
                        
                     </div>
                 </div>
              
-           
+                <!-- <button (click)="saveProfile()" class="btn btn-primary">Save Updates</button> -->
                 <button class="btn  btn-orange btn-lg px-3 mt-2" type="submit"  >Save Profile</button>
               </form>
          
@@ -100,7 +117,14 @@
         <!-- <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
         <div class="cards">
             <div class="card"> -->
-            
+                <!-- <div *ngFor="let posts of posts">
+                    <h2>{{post.title}}</h2>
+                  
+                      <p>
+                        {{post.description}}
+                      </p>
+                      <a href="{{image.url}}"></a>
+                  </div> -->
 
             <!-- </div> -->
         <!-- </div>

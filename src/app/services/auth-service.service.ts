@@ -31,8 +31,17 @@ requestOptions = { headers: this.headers };
    
     return this.http.get(`${this.url}/auth/user/`).pipe(map(responce => responce));
   }
+ 
   getUserProfile(userName): Observable<any>{
     console.log(this.requestOptions)
     return this.http.get(`${this.url}/auth/profile/${userName}/`, this.requestOptions).pipe(map(responce => responce))
   }
+  decodeToken(token) {
+    try {
+        return JSON.parse(atob(token.split('.')[1]));
+    } catch (e) {
+        return null;
+    }
 }
+}
+
