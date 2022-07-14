@@ -6,7 +6,7 @@
   }
   .homepage {
     background: radial-gradient(ellipse, transparent -60%, rgba(0, 0, 0, 0.8)),
-      url(https://media.swncdn.com/via/7586-mom-pixabay.jpg) no-repeat ;
+      url(https://images.unsplash.com/photo-1513653357777-f7d1b6b95f26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwc2lsaG91ZXR0ZXxlbnwwfHwwfHw%3D&w=1000&q=80) no-repeat ;
     min-height: 70vh;
     background-position: center;
    background-size: cover;

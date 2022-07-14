@@ -28,7 +28,9 @@ import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommentsComponent } from './components/comments/comments.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './components/landing/landing.component';
-
+import { EventsinfoComponent } from './components/mzazievents/eventsinfo/eventsinfo.component';
+import { Eventsinfo1Component } from './components/mzazievents/eventsinfo1/eventsinfo1.component';
+import { Eventsinfo2Component } from './components/mzazievents/eventsinfo2/eventsinfo2.component';
 
 
 const appRoutes: Routes = [
@@ -61,8 +63,10 @@ const appRoutes: Routes = [
     WellbeingComponent,
     UpdateProfileComponent,
     CommentsComponent,
-    LandingComponent
-    
+    LandingComponent,
+    EventsinfoComponent,
+    Eventsinfo1Component,
+    Eventsinfo2Component
   ],
   imports: [
     BrowserModule,
