@@ -7,3 +7,31 @@ body{
     padding-top: 4vh;
     padding-bottom: 20vh;
 }
+
+
+.form-control{
+    box-shadow: 10% yellow;
+    font-family: 'Rokkitt', serif;
+
+}
+.form-group{
+    font-family: 'Rokkitt', serif;  
+}
+h4{
+    font-family: 'Yeseva One', cursive; 
+    margin: auto; 
+    width: 50%;
+}
+.business{
+    margin-left: -15%;
+    width: 100%;
+}
+.modal-title{
+    display:inline;
+    margin-left: 15%;
+    font-size: 20px;
+}
+h3{
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+}
