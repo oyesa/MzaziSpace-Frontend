@@ -3,10 +3,25 @@
 font-family: 'Rokkitt', serif;
 font-family: 'Yeseva One', cursive; */
 
+h1{
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+    font-size: 44px;
+    font-weight: 700;
+  }
+  
+  p{
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: rgb(2, 2, 2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    margin-bottom: 27px;
+    font-weight: 400;
+  }
 
-.container{
-
-}
 .form-control{
     box-shadow: 10% yellow;
     font-family: 'Rokkitt', serif;
@@ -26,12 +41,13 @@ h4{
 }
 .modal-title{
     display:inline;
-    margin-left: 4rem;
+   
     font-size: 20px;
 }
 h3{
     font-family: 'Yeseva One', cursive;
     font-size: 20px;
+    text-align: center;
 }
 .title{
     /* text-align: center; */
@@ -50,4 +66,12 @@ h3{
 
 .date{
     margin-left: 2%;
+}
+
+.card{
+    border-radius:10px;
+}
+
+.card img{
+    border-radius:10px; 
 }
