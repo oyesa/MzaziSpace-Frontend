@@ -1,1 +1,114 @@
-<p>signup works!</p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="container">
+<div class="forms-container">
+<div class="signin-signup">
+<form action="#" class="sign-up-form" [formGroup]="formGroup" (ngSubmit)="signupProcess()">
+<h2 class="title" style="font-family: 'Yeseva One', cursive;">Sign up</h2>
+<div class="input-field">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="First Name" formControlName="f_name"/>
+</div>
+<div class="input-field">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Last Name" formControlName="l_name"/>
+</div>
+<div class="input-field">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Username" formControlName="username"/>
+</div>
+<div class="input-field">
+<i class="fa fa-envelope"></i>
+<input type="email" placeholder="Email" formControlName="email" />
+</div>
+<div class="input-field">
+<i class="fa fa-lock"></i>
+<input type="password" placeholder="Password" formControlName="password"/>
+</div>
+<label class="form-label" for="typeName" style="font-family: 'Yeseva One', cursive; font-weight: 500; ">User Role:</label>
+<div class="form-outline">
+<select name="demo" id="typeName" class="form-control" formControlName="user_role" placeholder="Select" required>
+<option style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 500;">Select Option</option>
+<option formControlName="user_role" style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 500;">SingleParent</option>
+<option formControlName="user_role" style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 500;">Counsellor</option>
+</select>
+</div>
+<input type="submit" class="btn" value="Sign up"/>
+<p class="social-text">Our social platforms</p>
+<div class="social-media">
+<a href="#" class="social-icon">
+<i class="fa fa-facebook-f"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-google"></i>
+</a>
+<a href="#" class="social-icon">
+<i class="fa fa-linkedin"></i>
+</a>
+</div>
+</form>
+</div>
+</div>
+
+<div class="panels-container">
+<div class="panel left-panel">
+<div class="content">
+<h3 style="font-family: 'Yeseva One', cursive; letter-spacing: 3px; margin-right: 20%;">One of us ?</h3>
+<p>
+Join the best hub for single parents!
+</p>
+<button class="btn transparent" routerLink="/login" id="signUpBtn" style="font-family: 'Yeseva One', cursive; color: #000;">
+Login
+</button>
+</div>
+<img src="/assets/signup.png" class="image" alt="" />
+</div>
+<div class="panel right-panel">
+<div class="content">
+<h3 style="font-family: 'Yeseva One', cursive;">One of us ?</h3>
+<p>
+Join the best hub for single parents!
+</p>
+</div>
+<img src="/assets/signup.png" class="image" alt="" />
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

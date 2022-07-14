@@ -1,16 +1,40 @@
 * {
     scroll-behavior: smooth;
-    font-family: 'Tahoma';
     margin:0;
     padding: 0;
     box-sizing: border-box;
+ 
       
 }
 
-
-body
-{
-   background-color: 
+.modal {
+    text-align: center;
+    padding: 0!important;
+   
+  }
+  
+  .modal::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width:60%
+  
+  }
+  
+  .modal-dialog {
+    display: flex;
+    margin-left: 68%;
+   
+    
+  }
+  .modal-title{
+    
+   
+    font-size: 20px;
 }
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,50 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabriela:wght@400;700&display=swap');
-@import "~bootstrap/dist/css/bootstrap.css";
+* {
+  text-decoration: none;
 
+  scroll-behavior: smooth;
+}
+.homepage {
+  background: radial-gradient(ellipse, transparent -60%, rgba(0, 0, 0, 0.8)),
+    url(https://media.swncdn.com/via/7586-mom-pixabay.jpg) no-repeat ;
+  min-height: 90vh;
+  background-position: center;
+ background-size: cover;
+}
+.fa {
+  font-size: 1.7rem;
+}
 
-body {
+.text h1 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+.content {
+  height: 75vh;
+}
+
+h1, h2{
+  font-family: 'Yeseva One', cursive;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn{
+  font-family: 'Montserrat', sans-serif;
+}
+/* .content {
+  display: flex;
+  height: 60vh;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 8%;
+  justify-content: center;
+} */
+
+.text {
+  flex-basis: 50%;
+}
+
+.text p {
+  font-size: 1.5rem;
+}
+
+.inner-circle {
+
+ margin-left:40%;
+ 
+position: relative;
+ 
+}
+
+.mydiv {
+  display: flex;
+  align-items: center;
+  position: absolute;
   
-    background: #1B019B;
-    background-image: linear-gradient(130deg, rgba(0, 122, 244, 0) 20%, rgb(0, 0, 255), 80%); 
-    font-family: Verdana, Tahoma, sans-serif;
-    margin: 5%;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    border-style:none;
-    border-radius: 20px;
-   
-   
-
 }
-.mycontainer {
-
-    width:25vw;
-    float:left;
-    margin-top: -40%;
-    color:whitesmoke;
-    
-   
-    
+.circle .mydiv {
+  top: 18%;
+  left: 12%;
 }
 
- img{
-    height:60vh;
-    width:45vw;
-    margin-left: 50%;
-    border-radius: 1%;
-    
+.mydiv i {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #f4b504;
 }
-ul li a{
-    color: #fff;
-    font-size:2rem;
-   
-    
+.bottom-icons .fa-circle {
+  color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.bottom-icons i {
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+.box-container {
+  background-color: #f5f5f5;
+}
+.box-container .box i {
+  font-size: 3.5rem;
 }
 
-ul li{
-    list-style: none;
-    margin: 0 2px;
-    padding-left:20% ;
-    display: flex;
-    justify-content: space-between;
+.featured {
+  background-color: #f5f5f5;
+}
+.user-content {
+  border-bottom: 0.1rem solid #333;
+  border-top: 0.1rem solid #333;
+}
+.popular-recipes .recipe-box .image {
+  position: relative;
+}
+.popular-recipes .recipe-box .image img {
+  height: 22rem;
+}
+.popular-recipes .recipe-box .image .circle {
+  position: absolute;
+  bottom: 5%;
+  right: 4%;
+  color: #fff;
+}
+.popular-recipes .recipe-box .image .circle .inner-circle {
+  background: transparent;
+}
+
+
+@media (max-width: 948px) {
+  .text h1 {
+    font-size: 3rem;
+    font-weight: bolder;
   }
+}
+
+
+    .third {
+        margin-top: 90px;
+    }
+
+    .top-section {
+        text-align: center;
+    }
+
+    .content-section {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 90px;
+        text-align: center;
+        margin-bottom: 50px;
+        flex-direction: row;
+    }
+
+    .person-img {
+        height: 240px;
+        position: relative; 
+        width: 240px; 
+        overflow: hidden; 
+        border-radius: 50%;
+        border: 2px solid #f4b504;
+
+    }
+
+
+    .star-rating {
+        color: #f4b504;
+        font-size: 4rem;
+    }
+
+.person1, .person2, .person3{
+  border: 0px solid #f4b504;
+
+  padding: 35px;
+  background-color: white;
+}
+

@@ -1,1 +1,89 @@
-<p>profile works!</p>
+<body>
+  <div class="container mt-5">
+      <!--user profile here-->
+     <div class="userdetails " style="background-image: url('https://static4.depositphotos.com/1003671/324/i/600/depositphotos_3248385-stock-photo-african-sunset-with-silhouetted-tree.jpg'); width:1254px;height:438px; background-size: cover; background-repeat:no-repeat; border-radius:10px; opacity:0.8rem">
+                      <div class=" " >
+
+                        <img class="rounded-circle profile-img" src="https://media.istockphoto.com/illustrations/stylish-avatar-in-black-in-a-yellow-circle-profile-template-for-illustration-id1311497219?k=20&m=1311497219&s=170667a&w=0&h=l_JLCykf3bHxG-HzTDDRnVNBGmkpVz4iH9v5Gdqcuco=" alt="profile-image" width="10%" style="margin-top:29% ; margin-left: 10%;" >
+
+                        <!-- <img [src]="profile.prof_pic" class="user-img" /> -->
+                        <!-- <img  class="rounded-circle profile-img" src="{{prof_pic_url + profile.prof_pic}}" alt="profile-image" width="60%"> -->
+                          <div class="bio" style="margin-left:10%">
+                          <h3 class="mt-4 h-font-bold" >{{profile?.user?.f_name}} {{profile?.user?.l_name}}</h3>
+                          <p class="p-description">{{profile?.user?.email}}</p>
+                          <p class="p-description">{{profile?.user?.user_role}}</p>
+                      </div>
+                    </div>
+
+
+
+
+
+
+              </div>
+    <div class="container-fluid">
+
+
+    </div>
+              <div class="col-lg-12 col-md-5 col-sm-12 text-center" style="margin-left:16% ; margin-top: 5%;">
+                <h3>Bio</h3>
+                <p class="p-description  d-6">{{profile.bio}}</p>
+                <button class="btn btn-warning mb-4 p-3" style="border-radius: 20px;box-shadow: 2px 2px white; background-color: #f4b504; color: #000;border: none;justify-content: center; font-size:1.3rem;" (click)="updateProfile(profile, mymodal)">Update Profile</button>
+
+            </div>
+          
+              </div>
+
+<br>
+<br>
+
+  
+ <!-- </div> -->
+
+  </body>
+
+
+  <ng-template #mymodal let-modal  >
+    
+    <div class="modal-header text-center" >
+
+      <div class="md-form mb-4" >
+        <h4 class="modal-title text-center" id="modal-basic-title">Update Your Profile Here</h4>
+
+            <div class="business">
+
+
+        <div class="col-lg-12 col-md-5 col-sm-12 mt-3 text-center">
+
+            <p class="p-description d-5">{{profile.bio}}</p>
+
+        </div>
+          <div class="container"    >
+           <div class="row justify-content-center align-items-center ">
+             <div class="col-12 col-md-5 col-lg-6 col-xl-5">
+             <form action="" [formGroup]="profileForm" >
+
+
+              <input type="text" name="" id="" style="padding:60px ; width:22rem ; margin-left:-80px; " placeholder="Add Bio" formControlName="bio">
+              <div ng-app="testApp" ng-controller="testController">
+                <div class="well fw-bold mt-3">
+                  <input type="file"  accept="image/*" ng-model="imageSrc" onchange="angular.element(this).scope().fileNameChaged(this)" style="font-size:15px">
+                </div>
+            </div>
+
+        
+            <!-- <button class="btn  btn-orange btn-lg px-3 mt-2" type="submit"  >Save Profile</button> -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning mb-3 " (click)="saveProfile()">Save Profile</button>
+              </div>
+          </form>
+
+
+ </div>
+ </div>
+</div>
+          </div>
+
+      </div>
+    </div>
+  </ng-template>

@@ -1,0 +1,69 @@
+h1{
+  font-family: 'Yeseva One', cursive;
+  
+  color: #fff;
+  margin-top: 4%;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.text{
+  margin-top:14%;
+  text-align: center;
+  margin-left:10%;
+}
+p{
+ 
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+
+  font-weight: 400;
+}
+
+.events {
+    display:flex;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.5)
+    );
+    border-radius: 1rem;
+    margin: rem 10rem;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    justify-content:space-between;
+    width: 40%;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  width:fit-content;
+
+
+}
+.card-info {
+    display: flex;
+    flex-direction: column;
+  
+  }
+.events img{
+    width:100%;
+    height: 100%;
+
+}
+.homepage {
+ 
+  background: url('https://images.unsplash.com/photo-1475483768296-6163e08872a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z3JvdXAlMjBldmVudHMlMjBjbGlwYXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60 ');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+
+
+}
+

@@ -1,0 +1,63 @@
+* {
+  text-decoration: none;
+}
+
+.custom-card{
+    border-color:#f4b504;
+}
+
+.homepage {
+    background: radial-gradient(ellipse, transparent -60%, rgba(0, 0, 0, 0.8)),
+      url(https://images.unsplash.com/photo-1513653357777-f7d1b6b95f26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwc2lsaG91ZXR0ZXxlbnwwfHwwfHw%3D&w=1000&q=80) no-repeat ;
+    min-height: 50vh;
+    background-position: center;
+   background-size: cover;
+  }
+  .fa {
+    font-size: 1.7rem;
+  }
+  
+  .text h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+  }
+  .content {
+    height: 40vh;
+  }
+  
+  h1, h2{
+    font-family: 'Yeseva One', cursive;
+  }
+ h5{
+  font-family: 'Yeseva One', cursive;
+  font-size:1.2rem;
+ } 
+ h1{
+margin-bottom:25px
+ }
+  p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+  }
+  
+  .btn{
+    font-family: 'Montserrat', sans-serif;
+    padding:15px;
+  }
+.card{
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  background-color: rgba(251, 230, 161, 0.2);
+  
+}
+
+  
+  
+  
+ 
+  
+ 
+ 
+  
