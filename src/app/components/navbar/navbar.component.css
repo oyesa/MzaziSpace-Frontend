@@ -7,45 +7,63 @@ font-family: 'Yeseva One', cursive; */
 
 .my-navbar {
   /* box-shadow: 0px 10px 30px rgba(216, 216, 216, 0.45); */
-  position: fixed;
+ 
   width: 100%;
+  
 }
 
 .navbar-brand {
   font-weight: bold;
-  color: black;
+  color: #f4b504;
   font-family: 'Yeseva One', cursive;
-  font-size: 17px;
+  font-size: 1.3rem;
+  margin-top:24px;
+  margin-left:-10%;
 }
 .navbar-brand img {
   width: 50px;
 }
 
 .nav-link {
-  border-bottom: 4px solid white;
+ 
   margin-right: 24px;
   transition: 0.3s ease;
   padding: 5px;
+  font-weight:bolder;
+ 
 }
 .nav-link:hover {
   border-bottom: 2px solid #EDB82C;
+  
 }
 
 #navbarDropdown{
   font-family: 'Yeseva One', cursive;
   font-size: 17px;
-  color: black;
+  color: #f4b504;
 }
 
 .dropdown-item{
   font-family: 'Yeseva One', cursive;
   font-size: 17px;
-  color: black;
+  color: #f4b504;
 }
 
 .nav-active a {
-  color: black;
+  color: #f4b504;
   font-family: 'Yeseva One', cursive;
-  font-size: 17px;
+  font-size: 1.3rem;
+  
+}
+.dropdown-item{
+  color: black;
+}
+:hover{
+  color: #ffff
+}
+
+
+ul li a:hover {
+  color: rgb(249, 251, 247);
 }
 

@@ -91,23 +91,12 @@ h5, h6{
   font-family: 'Montserrat', sans-serif;
 }
 
-/* .about{
-  margin-top: 7%;
-  background-image: url(/assets/andrae-ricketts-Q9_zv0LN4jU-unsplash.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 3%;
-} */
+
 .about-us{
   margin-top: 3%;
 }
 
-/* #about-head{
-  padding-left: 15%;
-  padding-bottom: 30%;
-  padding-top: 13%;
-} */
+
 
 .about-head{
   color: #F4B504;
@@ -118,7 +107,7 @@ h5, h6{
 }
 
 body{
-  margin-bottom: 29%;
+  margin-bottom: 21%;
 }
 
 #bout-who{

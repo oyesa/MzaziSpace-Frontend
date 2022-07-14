@@ -1,72 +1,30 @@
-<br>
-<br>
-<br>
-<div class="container">
+<div class="container " style="margin-top: 5%; margin-bottom:10%" >
+  <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.8); color: #fff; "  >
+    <h1 class="display-3">Wellbeing Group</h1>
+    <p class="lead">The Wellbeing Group for single parents is a volunteer-run, peer-to-peer, support community. It exists to provide a safe, friendly, private online space for single parents to meet, connect and offer peer support.
+      group members can engage in conversations and discussions with other group members on a group chat wall, as well as having the opportunity to attend regular virtual meetups, hosted by a volunteer digital group co-ordinator.
+      
+      
+      </p>
+    <hr class="my-2">
 
-        <button class="btn btn-light" style="border-radius: 10px;box-shadow: 2px 2px black; background-color: #f4b504; color: #000; border: none;" (click)="open(mymodal)">Share</button>
-        
-        <ng-template #mymodal let-modal >
-            <div class="modal-header">
-            
-              <div class="md-form mb-4">
-                <h4 class="modal-title" id="modal-basic-title">Share your story</h4>
-              </div>
-            </div>
-            <div class="modal-body">
-              <form (ngSubmit)="addPost()">
-                <textarea
-                name="post"
-                class="form-input post-form"
-                placeholder="What's going on?"
-                style="width:400px;"
-                formControlName="post"
-                [(ngModel)]="post">
-                </textarea>
-              
-              
+
+   <a href="https://chat.whatsapp.com/DCOkXJIu3SIDyeNj7TTZW6" ><button class="btn " style="background-color: #f4b504;  margin-left: 45%; margin-top: 2%;" type="submit">Join Group</button> </a>
+    <p class="lead">
    
-            
-        
-                <label for="postFile">
-                  <input
-                    type="file"
-                    name="postFile"
-                    id="postFile"
-                    class="img-input"
-                    (change)="uploadFile($event)"
-                    />
-                  <i
-                    class="fa fa-file-image-o post-form-icons mt-2 float-left m-0 p-0"
-                    aria-hidden="true"
-                  ></i>
-                </label>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Post</button>
-                  
-                </div>
-              </form>
-            </div>
-        </ng-template>
+    </p>
+  </div>
+  <div class="jumbotron " >
+    <h1 class="display-3 text-dark">Terms and Conditions</h1>
+    <p class="lead text-dark" style="font-weight: 400">Once in the group, feel free to let your fellow group members know who you are, where you’re based and anything else you’d like to share about yourself as an introduction. This might feel a little intimidating, but you will receive a warm welcome and it will really help you integrate into the group – and get the most out of it!
+      
+      
+      </p>
+    <hr class="my-2">
 
-        <div class="card my-3 custom-card">
 
-          <div class="card-header">
-            <div class="d-flex">
-              <p class="ml-auto my-auto">
-                <strong><i class="fa fa-ellipsis-h" aria-hidden="true"></i></strong>
-              </p>
-            </div>
-          </div>
-          <div class="card-body p-0 m-0">
-            <p class="pl-3 pt-3"></p>
-            <img
-              
-              src=""
-              class="img-fluid"
-            />
-           
-          </div>
-         
-        </div>
-        
-             
+    <p class="lead text-primary"><i class="fa fa-cc" aria-hidden="true"></i>
+   Morning Brew
+    </p>
+  </div>
+  </div>      
