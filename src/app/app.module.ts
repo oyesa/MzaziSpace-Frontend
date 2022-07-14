@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingComponent } from './components/landing/landing.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AboutComponent } from './components/about/about.component';
@@ -26,7 +26,13 @@ import { SinglefathersComponent } from './components/singlefathers/singlefathers
 import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+import { CommentsComponent } from './components/comments/comments.component';
+import { EventsinfoComponent } from './components/mzazievents/eventsinfo/eventsinfo.component';
+import { Eventsinfo1Component } from './components/mzazievents/eventsinfo1/eventsinfo1.component';
+import { Eventsinfo2Component } from './components/mzazievents/eventsinfo2/eventsinfo2.component';
+import { PostsComponent } from './components/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingComponent } from './components/landing/landing.component';
 
 
 
@@ -37,7 +43,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent,
     ProfileComponent,
     HomepageComponent,
     AboutComponent,
@@ -47,27 +52,37 @@ const appRoutes: Routes = [
     CommunityComponent,
     GroupsComponent,
     MzazieventsComponent,
-    TestimonialsComponent,
     SignupComponent,
     LoginComponent,
+    TestimonialsComponent,
     FindcounselorComponent,
     ChildservicesComponent,
     SinglefathersComponent,
     SpecialComponent,
     WellbeingComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    CommentsComponent,
+    LandingComponent,
+    EventsinfoComponent,
+    Eventsinfo1Component,
+    Eventsinfo2Component,
+    PostsComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoutes,{enableTracing: true}),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
     NgbModule,
     NgbDropdownModule,
     BrowserAnimationsModule,
-    // MatSnackBarModule,
+    MatSnackBarModule,
   
   ],
   providers: [],

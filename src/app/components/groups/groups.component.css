@@ -1,3 +1,37 @@
 .custom-card{
     border-color:#f4b504;
 }
+* {
+    text-decoration: none;
+  }
+  .homepage {
+    background: radial-gradient(ellipse, transparent -60%, rgba(0, 0, 0, 0.8)),
+      url(https://images.unsplash.com/photo-1513653357777-f7d1b6b95f26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwc2lsaG91ZXR0ZXxlbnwwfHwwfHw%3D&w=1000&q=80) no-repeat ;
+    min-height: 70vh;
+    background-position: center;
+   background-size: cover;
+  }
+  .fa {
+    font-size: 1.7rem;
+  }
+  
+  .text h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+  }
+  .content {
+    height: 70vh;
+  }
+  
+  h1, h2{
+    font-family: 'Yeseva One', cursive;
+  }
+  
+  p{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .btn{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
