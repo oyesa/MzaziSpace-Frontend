@@ -13,15 +13,18 @@
               </div>
             </div>
             <div class="modal-body">
-              <form [formGroup]="wellbeingForm" (ngSubmit)="addPost()">
-                Description:<textarea
+              <form (ngSubmit)="addPost()">
+                <textarea
+                name="post"
                 class="form-input post-form"
                 placeholder="What's going on?"
-                cols="30" rows="10"
-                style="width:400px;" cols="30" rows="10"
-                formControlName="description"
-                >
-                </textarea>            
+                style="width:400px;"
+                formControlName="post"
+                [(ngModel)]="post">
+                </textarea>
+              
+              
+   
             
         
                 <label for="postFile">
@@ -38,8 +41,7 @@
                   ></i>
                 </label>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
-                  <button type="button" class="btn btn-outline-dark" (click)="addPost()">Post</button>
+                  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Post</button>
                   
                 </div>
               </form>
@@ -66,21 +68,5 @@
           </div>
          
         </div>
-       <div class="col-md-12">
-            
-            <div class="row">
-                <div class="col-md-4 mt-5"*ngFor="let posts of post">
-                    <div class="card" style=" height: 25rem; width:30rem;padding-left: 10%; ">
-                        
-                          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
-
-                        <div class="card-body">
-                            <p class="card-text text-dark">{{posts?.description}} </p>
-                        </div>
-                        
-                    </div>
-            </div>
-         </div>
-  </div>
         
              
