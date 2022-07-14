@@ -18,6 +18,10 @@ import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import { SinglefathersComponent } from './components/singlefathers/singlefathers.component';
 import { SpecialComponent } from './components/special/special.component';
 import { EventsinfoComponent } from './components/mzazievents/eventsinfo/eventsinfo.component';
+import { Eventsinfo1Component } from './components/mzazievents/eventsinfo1/eventsinfo1.component';
+import { Eventsinfo2Component } from './components/mzazievents/eventsinfo2/eventsinfo2.component';
+
+
 import { PostsComponent } from './components/posts/posts.component';
 
 const routes: Routes = [
@@ -35,6 +39,8 @@ const routes: Routes = [
   {path: 'groups', component: GroupsComponent},
   {path: 'mzazievents', component: MzazieventsComponent},
   {path: 'eventsinfo', component: EventsinfoComponent},
+  {path: 'eventsinfo1', component: Eventsinfo1Component},
+  {path: 'eventsinfo2', component: Eventsinfo2Component},
   {path: 'testimonials', component: TestimonialsComponent},
   {path: 'wellbeing', component: WellbeingComponent},
   {path: 'singlefathers', component: SinglefathersComponent},
