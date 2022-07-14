@@ -22,6 +22,7 @@ import { Eventsinfo1Component } from './components/mzazievents/eventsinfo1/event
 import { Eventsinfo2Component } from './components/mzazievents/eventsinfo2/eventsinfo2.component';
 
 
+import { PostsComponent } from './components/posts/posts.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -44,6 +45,7 @@ const routes: Routes = [
   {path: 'wellbeing', component: WellbeingComponent},
   {path: 'singlefathers', component: SinglefathersComponent},
   {path: 'special', component: SpecialComponent},
+  {path: 'posts', component: PostsComponent},
 ];
 
 @NgModule({

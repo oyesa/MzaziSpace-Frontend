@@ -1,18 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { posts } from 'src/app/classes/post';
-import { Post } from '../post';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable,map } from 'rxjs';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
   api_link: string = "https://mzazispace.herokuapp.com/"
 
+  headers = new HttpHeaders(
+    {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+    }
+  )
+
+requestOptions = { headers: this.headers };
+
+
   constructor(private http: HttpClient) { }
 
-  Post():Observable<Post[]>{
-    return this.http.get<Post[]>(this.api_link + `request/posts/`)
+  getPost():Observable<any>{
+    return this.http.get(this.api_link + `request/api/post/`,this.requestOptions).pipe(map(respose=>respose))
+  }
+  postPost():Observable<any>{
+    return this.http.post(this.api_link + `request/api/post/`,this.requestOptions).pipe(map(respose=>respose))
   }
 }
 
