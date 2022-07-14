@@ -5,32 +5,82 @@
 
         <button class="btn btn-light" style="border-radius: 10px;box-shadow: 2px 2px black; background-color: #f4b504; color: #000; border: none;" (click)="open(mymodal)">Share</button>
         
-        <ng-template #mymodal let-modal>
+        <ng-template #mymodal let-modal >
             <div class="modal-header">
             
               <div class="md-form mb-4">
                 <h4 class="modal-title" id="modal-basic-title">Share your story</h4>
-                
-
-                <textarea
-                name="post"
-                class="form-input post-form"
-                placeholder="What's going on?"
-                style="width:400px;"
-                
-              >
-              </textarea>
-              
-              
               </div>
             </div>
-        
+            <div class="modal-body">
+              <form [formGroup]="specialForm" (ngSubmit)="addPost()">
+                Description:<textarea
+                class="form-input post-form"
+                placeholder="What's going on?"
+                cols="30" rows="10"
+                style="width:400px;" cols="30" rows="10"
+                formControlName="description"
+                >
+                </textarea>            
             
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Post</button>
+        
+                <label for="postFile">
+                  <input
+                    type="file"
+                    name="postFile"
+                    id="postFile"
+                    class="img-input"
+                    (change)="uploadFile($event)"
+                    />
+                  <i
+                    class="fa fa-file-image-o post-form-icons mt-2 float-left m-0 p-0"
+                    aria-hidden="true"
+                  ></i>
+                </label>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
+                  <button type="button" class="btn btn-outline-dark" (click)="addPost()">Post</button>
+                  
+                </div>
+              </form>
             </div>
         </ng-template>
 
-      
-    
-  
+        <div class="card my-3 custom-card">
+
+          <div class="card-header">
+            <div class="d-flex">
+              <p class="ml-auto my-auto">
+                <strong><i class="fa fa-ellipsis-h" aria-hidden="true"></i></strong>
+              </p>
+            </div>
+          </div>
+          <div class="card-body p-0 m-0">
+            <p class="pl-3 pt-3"></p>
+            <img
+              
+              src=""
+              class="img-fluid"
+            />
+           
+          </div>
+         
+        </div>
+         <div class="col-md-12">
+            
+            <div class="row">
+                <div class="col-md-4 mt-5"*ngFor="let posts of post">
+                    <div class="card" style=" height: 25rem; width:30rem;padding-left: 10%; ">
+                        
+                          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+
+                        <div class="card-body">
+                            <p class="card-text text-dark">{{posts?.description}} </p>
+                        </div>
+                        
+                    </div>
+            </div>
+         </div>
+  </div>
+        
+             

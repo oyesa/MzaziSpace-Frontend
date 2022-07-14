@@ -18,7 +18,7 @@ export class PostService {
     }
   )
 
-requestOptions = { headers: this.headers };
+requestOptions = { headers: this.headers }
 
 
   constructor(private http: HttpClient) { }
