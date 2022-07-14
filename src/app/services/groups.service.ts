@@ -13,15 +13,20 @@ export class GroupsService {
     {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Headers': 'Content-TYpe',
-      'Authorization': 'Bearer' + JSON.parse(localStorage.getItem('token'))
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
     }
   )
 
-  requestOptions = {headers: this.headers}
+requestOptions = {headers: this.headers}
+
   constructor(private http: HttpClient) { }
 
-  Groups():Observable<any[]>{
-    return this.http.get<groups[]>(this.api_link + `request/api/group/`).pipe(map(response=>response))
+  getGroups():Observable<any>{
+    return this.http.get(this.api_link + `request/api/group/`,this.requestOptions)
+    .pipe(map(response=>response))
+  }
+  postGroups(data):Observable<any>{
+    return this.http.post(this.api_link + `request/api/group/`,data).pipe(map(response => response));
   }
 }

@@ -27,8 +27,9 @@ import { SpecialComponent } from './components/special/special.component';
 import { WellbeingComponent } from './components/wellbeing/wellbeing.component';
 import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommentsComponent } from './components/comments/comments.component';
-// import { PostsComponent } from './components/posts/posts.component';
+import { PostsComponent } from './components/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingComponent } from './components/landing/landing.component';
 
 
 
@@ -62,6 +63,8 @@ const appRoutes: Routes = [
     WellbeingComponent,
     UpdateProfileComponent,
     CommentsComponent,
+    PostsComponent,
+    LandingComponent,
     
     
   ],

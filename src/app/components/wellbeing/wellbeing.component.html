@@ -14,17 +14,15 @@
             </div>
             <div class="modal-body">
               <form (ngSubmit)="addPost()">
-                <textarea
+                Description:<textarea
                 name="post"
                 class="form-input post-form"
                 placeholder="What's going on?"
-                style="width:400px;"
+                cols="30" rows="10"
+                style="width:400px;" cols="30" rows="10"
                 formControlName="post"
                 [(ngModel)]="post">
-                </textarea>
-              
-              
-   
+                </textarea>            
             
         
                 <label for="postFile">
@@ -41,6 +39,7 @@
                   ></i>
                 </label>
                 <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
                   <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Post</button>
                   
                 </div>
@@ -67,6 +66,12 @@
            
           </div>
          
+        </div>
+        <div *ngFor="let posts of post">
+          category:{{posts?.categories}} <br>
+          <h3>image:</h3>
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+          <!-- image:{{posts?.image}} -->
         </div>
         
              
