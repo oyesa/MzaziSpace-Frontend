@@ -34,11 +34,7 @@ import { LandingComponent } from './components/landing/landing.component';
 
 
 const appRoutes: Routes = [
-  {path: 'home', component: HomepageComponent},
-  {path: 'community', component: CommunityComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'service', component: OurservicesComponent},
-  {path: 'testimonials', component: TestimonialsComponent},
+  
 ]
 
 @NgModule({
@@ -53,9 +49,9 @@ const appRoutes: Routes = [
     CommunityComponent,
     GroupsComponent,
     MzazieventsComponent,
-    TestimonialsComponent,
     SignupComponent,
     LoginComponent,
+    TestimonialsComponent,
     FindcounselorComponent,
     ChildservicesComponent,
     SinglefathersComponent,
@@ -64,7 +60,7 @@ const appRoutes: Routes = [
     UpdateProfileComponent,
     CommentsComponent,
     PostsComponent,
-    LandingComponent,
+    LandingComponent
     
     
   ],

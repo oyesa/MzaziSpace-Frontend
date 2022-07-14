@@ -39,7 +39,7 @@ const routes: Routes = [
   {path: 'wellbeing', component: WellbeingComponent},
   {path: 'singlefathers', component: SinglefathersComponent},
   {path: 'special', component: SpecialComponent},
-  {path: 'posts', component:PostsComponent}
+  {path: 'posts', component: PostsComponent},
 ];
 
 @NgModule({
