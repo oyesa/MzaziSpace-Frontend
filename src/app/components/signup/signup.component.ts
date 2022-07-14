@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 // import { AuthService } from 'src/app/services/auth.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-// import { MatSnackBar } from "@angular/material/snack-bar";
+import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,13 +14,16 @@ export class SignupComponent implements OnInit {
   formGroup: FormGroup;
 
   constructor(
-  
+    public snackBar: MatSnackBar,
     private authService: AuthServiceService,
     private http: HttpClient,
     private router: Router
     ) {}
-
-
+    openSnackBar(message: string, action: string) {
+      this.snackBar.open(message, action, {
+         duration: 5000,
+      });
+   }
     response!: any;
     message!: string;
 
@@ -54,34 +57,13 @@ export class SignupComponent implements OnInit {
       this.authService.signup(loginCredentials).subscribe(result =>{
         console.log('Here we are',result)
         this.router.navigate(['/login']);
-        // if(result.email){
-        //   console.log(result);
-        //   alert("Registered successfully");
-        // }else{
-        //   alert('Holla!!You have been signed up to Mzazi Space')
-        // }
 
       });
     }
   }
 
 
-//   submit(username: string, email: string, password: string,f_name: string,l_name:string,user_role:string): void {
-//     console.log(username, email, password,f_name,l_name,user_role)
-//     this.http.post('http://localhost:8000/auth/register/', {
-//         username: username,
-//         email: email,
-//         password: password,
-//         f_name:f_name,
-//         l_name:l_name,
-//         user_role:user_role
-//       })
-//       .subscribe((res) => {
-//         this.response = res;
-//         this.message = this.response.message;
-//         this.router.navigate(['/login']);
-//       });
-//   }
+
 
   
 }
